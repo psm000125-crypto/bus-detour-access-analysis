@@ -1,0 +1,10 @@
+{
+  "time_utc": "2026-10-17T07:46:06.625230+00:00",
+  "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
+  "query_file": "raw/osm_medium_query.txt",
+  "query_sha256": "83eb0bc74eef0799fe64c43849c493fbb9556f417921683568d7c3380a8799bf",
+  "query_characters": 262,
+  "url_characters": 443,
+  "success": false,
+  "error": "<urlopen error [SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate in certificate chain (_ssl.c:1010)>"
+}

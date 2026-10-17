@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-10-17T07:45:50.341700+00:00",
+  "endpoint": "https://overpass-api.de/api/interpreter",
+  "query_file": "raw/entrances_query.txt",
+  "query_sha256": "4f0bd9ff8002e80565b5734623fedc8724a8e84db8f2fdef430861e023098397",
+  "query_characters": 126,
+  "url_characters": 227,
+  "success": false,
+  "status": 502,
+  "error": "HTTP Error 502: Bad Gateway",
+  "response_excerpt": "# 502 Gateway Timeout\n\nThis Overpass API server is currently at capacity. All query workers are busy\nand the request queue is full.\n\n## What to do\n\nRetry your request using exponential backoff: wait a short interval, then retry.\nIf the request fails again, double the wait time and retry again.\n\n## For heavy or automated use\n\nThis public endpoint is intended for browser-based and human-operated tools.\nFor automated or high-volume use, run a local Overpass API instance:\n\nhttps://github.com/b1tw153/Overpass-API/blob/main/README.md\n"
+}

@@ -1,0 +1,1 @@
+[out:json][timeout:90][date:"2026-04-04T22:00:00Z"];(way["highway"](37.535,126.943,37.588,127.018);node["highway"="crossing"](37.535,126.943,37.588,127.018);node["railway"="subway_entrance"](37.535,126.943,37.588,127.018);way(404201566););out body;>;out skel qt;

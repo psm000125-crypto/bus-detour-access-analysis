@@ -1,0 +1,12 @@
+{
+  "time_utc": "2026-10-17T07:46:18.743187+00:00",
+  "endpoint": "https://overpass.private.coffee/api/interpreter",
+  "query_file": "raw/osm_medium_query.txt",
+  "query_sha256": "83eb0bc74eef0799fe64c43849c493fbb9556f417921683568d7c3380a8799bf",
+  "query_characters": 262,
+  "url_characters": 435,
+  "success": false,
+  "status": 500,
+  "error": "HTTP Error 500: Internal Server Error",
+  "response_excerpt": "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01//EN\" \"http://www.w3.org/TR/html4/strict.dtd\">\n<html><head>\n<title>500 Internal Server Error</title>\n</head><body>\n<h1>Internal Server Error</h1>\n<p>The server encountered an internal error or\nmisconfiguration and was unable to complete\nyour request.</p>\n<p>Please contact the server administrator at \n webmaster@localhost to inform them of the time this error occurred,\n and the actions you performed just before this error.</p>\n<p>More information about this error may be available\nin the server error log.</p>\n<hr>\n<address>Apache/2.4.66 (Debian) Server at overpass Port 80</address>\n</body></html>\n"
+}

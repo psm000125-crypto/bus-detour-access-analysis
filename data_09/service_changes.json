@@ -1,0 +1,86 @@
+{
+  "status": "AI transcription of official historical notices; not an independent human gold set",
+  "retrieved_on": "2026-10-17",
+  "timezone": "Asia/Seoul",
+  "event_id": "the_race_seoul_20260405",
+  "event_name": "2026 더 레이스 서울 21K",
+  "event_date": "2026-04-05",
+  "source_page": "https://www.suwon.go.kr/web/board/BD_board.view.do?bbsCd=1042&seq=20260402100206435",
+  "source_page_local": "raw/suwon_20260405.html",
+  "common_notice_image": "raw/apr05_notice.png",
+  "common_road_control_window": {
+    "start": "05:00",
+    "end": "08:40",
+    "qualification": "road section control times differ; not a route service window"
+  },
+  "records": [
+    {
+      "route_name": "8800",
+      "route_image": "raw/apr05_8800.jpg",
+      "direction": "수원 방면 회차",
+      "announced_service_window": {
+        "start": "2026-04-05T05:00:00+09:00",
+        "end": "2026-04-05T11:30:00+09:00",
+        "status": "announced plan; actual operation not verified",
+        "early_restoration_condition": "통제가 해제되는 즉시 정상경로로 복귀"
+      },
+      "actual_service_window": null,
+      "terminal_as_stated": "수원버스터미널",
+      "skipped_stops": [
+        {"name_as_printed": "국가인권위.안중근활동터(중)", "ars_id": "02002"},
+        {"name_as_printed": "서울시청.을지로입구", "ars_id": "02100"},
+        {"name_as_printed": "신한은행본점", "ars_id": "02233"},
+        {"name_as_printed": "서울역버스환승센터(6번승강장)", "ars_id": "02006"},
+        {"name_as_printed": "광교", "ars_id": "02136"}
+      ],
+      "boarding_point": {
+        "type": "temporary_landmark",
+        "name": "CPBC가톨릭평화방송 평화신문 건물 앞",
+        "ars_id": null,
+        "is_regular_stop": false,
+        "boarding_and_alighting_officially_announced": true,
+        "longitude": null,
+        "latitude": null,
+        "exact_waiting_area_verified": null,
+        "evidence": "source page body and route image: temporary boarding/alighting point"
+      },
+      "pedestrian_connection_event_date_verified": null,
+      "step_free_connection_verified": null,
+      "current_signage_observed": null,
+      "posting_permission_verified": null,
+      "source_locations": ["page body: 회차 지점", "route image: 통제일시/임시승하차지/미경유 정류소"],
+      "notes": "Stop IDs are transcribed as printed, not joined to an independent stop register. A null ID at a temporary boarding point is not evidence that boarding was unavailable."
+    },
+    {
+      "route_name": "M5107",
+      "route_image": "raw/apr05_M5107.jpg",
+      "direction": "수원 방면 회차",
+      "announced_service_window": {
+        "start": "2026-04-05T05:00:00+09:00",
+        "end": "2026-04-05T11:30:00+09:00",
+        "status": "announced plan; actual operation not verified",
+        "early_restoration_condition": "통제해제시 기존노선대로 운행"
+      },
+      "actual_service_window": null,
+      "terminal_as_stated": "경희대학교",
+      "skipped_stops": null,
+      "boarding_point": {
+        "type": "regular_stop",
+        "name": "명동성당.남대문세무서(중)",
+        "ars_id": "02001",
+        "is_regular_stop": true,
+        "boarding_and_alighting_officially_announced": true,
+        "longitude": null,
+        "latitude": null,
+        "exact_waiting_area_verified": null,
+        "evidence": "source page body: shared boarding/alighting point for M5107/M5115/M5121"
+      },
+      "pedestrian_connection_event_date_verified": null,
+      "step_free_connection_verified": null,
+      "current_signage_observed": null,
+      "posting_permission_verified": null,
+      "source_locations": ["page body: route endpoints and 회차 지점", "route image: 예정시간/복귀조건"],
+      "notes": "The map depicts a changed route, but a stop-by-stop skipped-stop list is not supplied in this record. Do not copy 8800's skipped-stop IDs into this route."
+    }
+  ]
+}
