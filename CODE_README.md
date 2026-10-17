@@ -21,7 +21,7 @@ python -m venv .venv
 새 지도 취득·로그인·API 키·유료 AI 서비스가 필요하지 않습니다.
 의존 패키지는 requirements.txt에 고정했습니다. 가상환경 자체는 동봉하지 않았습니다.
 
-run_analysis.py는 확대 지도·부담 분해·수량·경로·인지 의존성·승차 접근 목표·보행속도·탄소 가정 재계산과 모형 테스트 26개를 실행합니다.
+run_analysis.py는 확대 지도·부담 분해·수량·경로·인지 의존성·승차 접근 목표·보행속도·탄소 가정 재계산과 모형 테스트 28개를 실행합니다.
 설치가 끝난 기존 Python 3.12 환경에서는 바로 `python run_analysis.py`로 실행할 수 있습니다.
 기대하는 주 결과는 출입구 22개·계산 가능 21개·미연결 1개·후보 53개·2곳 조합 1,378개입니다.
 같은 추가 2곳에서 최대 E는 여정 수 우선 약 961.872m, 추가길이 부담 우선 약 649.483m입니다.
@@ -40,7 +40,7 @@ run_analysis.py는 확대 지도·부담 분해·수량·경로·인지 의존�
 - data_14/decision_results.json 및 *.csv: 새 분석 결과
 - data_14/verification_decisions.json: 이전 독립 인지 20개 값·분해 항등식·경로 정합성 검증
 - data_17/README.md: 위치 변경·보행속도·거리값·탄소 입력 가정과 해석 범위
-- data_17/*.csv 및 access_results.json: 접근 목표 시나리오·보행 부담·미국 EPA 참고 계수의 산술 결과
+- data_17/*.csv 및 access_results.json: 접근 목표·보행 부담·H1000 거리 가산성과 국내 지침·가정 연비를 결합한 대상 여정당 CO2
 - data_17/ai_source_recheck.csv: AI의 동일 원문 ID 재대조 기록. 사람 검수 정확도가 아님
 - BUNDLE_MANIFEST.json: 이 압축파일에 포함한 파일과 SHA-256
 - SOURCE_NOTICE.md: 데이터·스킬 출처와 이용 조건

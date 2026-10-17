@@ -33,11 +33,12 @@ https://www.klimousine.com/center/notice_view.php?code=&idx=6393&page=1&ptype=vi
 
 ## 탄소 입력의 참고 계수
 
-US EPA, Greenhouse Gas Emissions from a Typical Passenger Vehicle.
-https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
-확인 2026-10-17. 일반 승용차 배기관 CO2 약 400g/mile를 가정 계산에 참고했습니다.
-미국 참고값이며 한국 평균·전 과정 온실가스 계수 또는 정책 순감축량이 아닙니다.
-회피 자동차 전환율·거리는 관측값이 아닌 입력 가정입니다. data_17/README.md 참조.
+환경정보공개시스템, 2024년 환경정보공개제도 등록 가이드라인(2024.4.), 인쇄면 156~157쪽.
+https://env-info.kr/v2/publish/testfiles/2024년%20환경정보공개제도%20등록%20가이드라인.pdf
+확인 2026-10-17. 휘발유 순발열량 30.4MJ/L와 CO2 계수 69,300kg/TJ를 사용했습니다.
+연비 10·15·20km/L는 입력 가정입니다. 국내 운행차량 실측 평균·전 과정 온실가스·정책 순감축량이 아닙니다.
+CO2 성분만 산정하고 다른 온실가스는 제외합니다. 회피 전환율·거리는 관측값이 아닌 입력 가정입니다.
+원문 전체는 묶음에 재배포하지 않으며 수치·출처·계산 가정을 보존합니다. data_17/README.md 참조.
 
 ## 스킬과 AI
 

@@ -14,12 +14,23 @@ sys.path.insert(0, str(ROOT.parent / "data_13"))
 from recompute_expanded import build, choose_origins, prepare, base
 from policy_engine import PolicyEngine
 
-EPA_URL = "https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle"
-EPA_KG_PER_VEHICLE_KM = 0.400 / 1.609344
+DOMESTIC_URL = "https://env-info.kr/v2/publish/testfiles/2024년%20환경정보공개제도%20등록%20가이드라인.pdf"
+GASOLINE_NET_HEAT_MJ_PER_L = 30.4
+GASOLINE_CO2_KG_PER_TJ = 69300
+ASSUMED_FUEL_ECONOMY_KM_PER_L = 15
 
 
-def carbon_case(target_journeys, assumed_fraction, car_km, occupants=1, factor=EPA_KG_PER_VEHICLE_KM):
+def gasoline_kg_per_vehicle_km(fuel_economy):
+    """Domestic guideline fuel factor with explicitly assumed economy; CO2 only."""
+    if not np.isfinite(fuel_economy) or fuel_economy <= 0:
+        raise ValueError("Fuel economy must be positive and finite")
+    return GASOLINE_NET_HEAT_MJ_PER_L * GASOLINE_CO2_KG_PER_TJ / 1e6 / fuel_economy
+
+
+def carbon_case(target_journeys, assumed_fraction, car_km, occupants=1, factor=None):
     """Avoided car tailpipe component, not net savings or measured mode shift."""
+    if factor is None:
+        factor = gasoline_kg_per_vehicle_km(ASSUMED_FUEL_ECONOMY_KM_PER_L)
     if target_journeys < 0 or not 0 <= assumed_fraction <= 1 or car_km < 0 or occupants <= 0 or factor < 0:
         raise ValueError("Invalid carbon scenario input")
     return target_journeys * assumed_fraction / occupants * car_km * factor
@@ -58,7 +69,7 @@ def main():
     assert len(set(targets.values())) == 2
     cases = {"official_proxy": original.a, **targets}
     inverse = pyproj.Transformer.from_crs(contract["measurement_crs"], 4326, always_xy=True)
-    rows, summary, burdens, speeds, locations = [], [], [], [], []
+    rows, summary, burdens, speeds, locations, tail_checks = [], [], [], [], [], []
     ref = {name: original.row(name, notices) for name in original.origins}
     for label, target in cases.items():
         engine = PolicyEngine(graph, origin_nodes, original.s, target)
@@ -81,13 +92,25 @@ def main():
             assert abs(item["B_m"] + item["L_m"] + item["E_m"] - item["D_policy_m"]) < 1e-7
             rows.append(item); current.append(item)
         frame = pd.DataFrame(current)
+        if label == "H1000":
+            tail_length = nx.shortest_path_length(graph, target, original.a, weight="length_m")
+            for item in current:
+                original_row = ref[item["origin"]]
+                known_reduction = original_row["D_known_m"] - item["D_known_m"]
+                policy_reduction = original_row["D_policy_m"] - item["D_policy_m"]
+                residual = max(abs(known_reduction - tail_length), abs(policy_reduction - tail_length))
+                assert residual < 1e-7
+                tail_checks.append({"origin": item["origin"], "shared_tail_length_m": tail_length,
+                                    "D_known_reduction_m": known_reduction, "D_policy_reduction_m": policy_reduction,
+                                    "E_change_m": item["E_m"] - original_row["E_policy_m"], "max_residual_m": residual})
         summary.append({"scenario": label, "resolved": len(frame), "unresolved_of_22": 1,
                         "mean_B_m": frame.B_m.mean(), "mean_L_m": frame.L_m.mean(), "mean_E_m": frame.E_m.mean(),
                         "mean_D_known_m": frame.D_known_m.mean(), "max_D_known_m": frame.D_known_m.max(),
                         "mean_D_policy_m": frame.D_policy_m.mean(), "max_D_policy_m": frame.D_policy_m.max(),
                         "mean_L_change_vs_official_proxy_m": frame.L_m.mean() - (pd.Series([r["D_known_m"] for r in ref.values()]).mean() - frame.B_m.mean()),
                         "better_policy_journeys": int((frame.delta_D_vs_official_proxy_m < -1e-7).sum()),
-                        "worse_policy_journeys": int((frame.delta_D_vs_official_proxy_m > 1e-7).sum())})
+                        "worse_policy_journeys": int((frame.delta_D_vs_official_proxy_m > 1e-7).sum()),
+                        "above_proposed_L500_trigger": int(frame.L_m.gt(500).sum())})
         for column in ("D_known_m", "D_policy_m"):
             for cutoff in (500, 1000, 1500):
                 count, valid = threshold_count(frame[column], cutoff)
@@ -98,22 +121,30 @@ def main():
                 speeds.append({"scenario": label, "distance_type": column, "assumed_speed_m_s": speed,
                                "mean_minutes": frame[column].mean() / speed / 60,
                                "max_minutes": frame[column].max() / speed / 60})
-    carbon = [{"target_journeys_assumed": 100, "avoided_car_fraction_assumed": fraction,
-               "car_km_assumed": km, "occupants_assumed": 1,
-               "kg_CO2_per_vehicle_km_US_EPA_reference": EPA_KG_PER_VEHICLE_KM,
-               "avoided_car_tailpipe_component_kg_CO2": carbon_case(100, fraction, km)}
-              for fraction in (0, 0.01, 0.03, 0.05) for km in (2, 5, 10)]
+    carbon = [{"normalization_target_journeys": 1, "avoided_car_fraction_assumed": fraction,
+               "car_km_assumed": km, "occupants_assumed": 1, "fuel_economy_km_L_assumed": economy,
+               "kg_CO2_per_vehicle_km_domestic_guideline_with_assumed_economy": gasoline_kg_per_vehicle_km(economy),
+               "avoided_car_CO2_g_per_target_journey": 1000 * carbon_case(1, fraction, km, factor=gasoline_kg_per_vehicle_km(economy))}
+              for economy in (10, 15, 20) for fraction in (0, 0.01, 0.03, 0.05) for km in (2, 5, 10)]
     for name, records in (("location_journeys", rows), ("location_summary", summary), ("hypothetical_locations", locations),
-                          ("distance_thresholds", burdens), ("walking_speed_scenarios", speeds), ("carbon_scenarios", carbon)):
+                          ("distance_thresholds", burdens), ("walking_speed_scenarios", speeds), ("carbon_scenarios", carbon),
+                          ("h1000_tail_checks", tail_checks)):
         pd.DataFrame(records).to_csv(ROOT / f"{name}.csv", index=False, encoding="utf-8-sig")
     output = {"status": "hypothetical target locations and illustrative arithmetic, not operational alternatives or observed effects",
               "targets_rule": "Existing non-step/corridor OSM node on official-proxy S-A shortest path nearest S distances 500/1000m; no outcome-based selection",
               "fixed_notices": notices, "common_resolved_origins": 21, "unresolved_of_22": 1,
               "distance_thresholds": "500/1000/1500m are analyst-selected planning sensitivity values, not disability cutoffs",
               "speeds": "0.5/0.8/1.2 m/s are assumed sensitivity values, not group measurements; walking only, no waiting or crossing delay",
-              "EPA_reference": {"url": EPA_URL, "checked_on": "2026-10-17", "source_g_CO2_per_mile": 400,
-                                "mile_km": 1.609344, "scope": "US typical passenger vehicle tailpipe CO2; not Korean fleet or lifecycle"},
-              "carbon_scope": "100 target journeys, one occupant; 0/1/3/5% preventable car switching and 2/5/10km all assumed. Only avoided car component; subtract additional bus/shuttle/operations to assess net savings.",
+              "domestic_carbon_reference": {"url": DOMESTIC_URL, "title": "2024년 환경정보공개제도 등록 가이드라인",
+                  "checked_on": "2026-10-17", "printed_pages": [156, 157], "pdf_pages_one_based": [160, 161],
+                  "gasoline_net_heat_MJ_L": GASOLINE_NET_HEAT_MJ_PER_L, "gasoline_CO2_kg_TJ": GASOLINE_CO2_KG_PER_TJ,
+                  "assumed_economy_km_L": [10, 15, 20], "main_economy_km_L": 15,
+                  "main_factor_kg_CO2_vehicle_km": gasoline_kg_per_vehicle_km(15),
+                  "scope": "Fuel combustion CO2 component from domestic reporting guideline, with assumed fuel economy; not measured Korean fleet average, CH4/N2O or lifecycle"},
+              "carbon_scope": "Per target journey, one occupant; 0/1/3/5% preventable car switching, 2/5/10km and 10/15/20km/L all assumed. Only avoided car CO2 component; multiply by measured target journeys and subtract additional operations for net savings.",
+              "h1000_tail_verification": {"checked_origins": len(tail_checks), "tail_length_m": tail_checks[0]["shared_tail_length_m"],
+                  "max_residual_m": max(row["max_residual_m"] for row in tail_checks)},
+              "proposed_policy_trigger": "Attach mitigation plan if per-origin known destination access minus original-stop access exceeds 500m, or safety/step-free route remains unverified. Analyst-proposed review trigger, not a legal or disability limit; distinct from H500 location selection.",
               "input_sha256": {str(raw.relative_to(ROOT.parent)): hashlib.sha256(raw.read_bytes()).hexdigest()},
               "locations": locations, "summary": summary}
     (ROOT / "access_results.json").write_text(json.dumps(output, ensure_ascii=False, indent=2), encoding="utf-8")

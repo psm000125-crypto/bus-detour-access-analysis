@@ -1,0 +1,20 @@
+{
+  "checked_on": "2026-10-17 Asia/Seoul",
+  "source_title": "2024년 환경정보공개제도 등록 가이드라인",
+  "source_date": "2024-04",
+  "url": "https://env-info.kr/v2/publish/testfiles/2024년%20환경정보공개제도%20등록%20가이드라인.pdf",
+  "source_platform": "환경정보공개시스템",
+  "printed_pages": [156, 157],
+  "pdf_pages_one_based": [160, 161],
+  "section": "이동연소(휘발유): 주행거리 기반 계산과 참고 순발열량·배출계수",
+  "gasoline_net_heat_MJ_per_L": 30.4,
+  "CO2_kg_per_TJ": 69300,
+  "CO2_kg_per_L_calculated": 2.10672,
+  "assumed_fuel_economy_km_per_L": [10, 15, 20],
+  "main_assumed_fuel_economy_km_per_L": 15,
+  "main_CO2_g_per_vehicle_km_calculated": 140.448,
+  "verified_representation": "Web tool extracted original PDF text, including table values; screenshot fetches timed out. No claim of a separately downloaded PDF hash or visual verification of source pages.",
+  "scope": "Domestic reporting guideline fuel CO2 coefficients combined with assumed economy. Not a measured Korean passenger-car fleet average, legal vehicle standard, CO2-equivalent total or lifecycle factor.",
+  "omitted_components": ["CH4", "N2O", "fuel production and distribution", "vehicle production"],
+  "replaced_reference": "US EPA generic passenger vehicle 400g CO2/mile, used in prior draft only"
+}

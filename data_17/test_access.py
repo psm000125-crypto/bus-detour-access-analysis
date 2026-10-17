@@ -1,6 +1,6 @@
 import unittest
 import numpy as np
-from analyze_access import carbon_case, decomposition, threshold_count
+from analyze_access import carbon_case, decomposition, threshold_count, gasoline_kg_per_vehicle_km
 
 
 class AccessScenarioTests(unittest.TestCase):
@@ -22,6 +22,16 @@ class AccessScenarioTests(unittest.TestCase):
         for args in [(100, 1.1, 5), (100, .1, -5), (-1, .1, 5), (100, .1, 5, 0)]:
             with self.assertRaises(ValueError):
                 carbon_case(*args)
+
+    def test_domestic_fuel_factor_unit_conversion(self):
+        self.assertAlmostEqual(gasoline_kg_per_vehicle_km(15), .140448)
+        self.assertAlmostEqual(carbon_case(1, .05, 5) * 1000, 35.112)
+        with self.assertRaises(ValueError):
+            gasoline_kg_per_vehicle_km(0)
+
+    def test_per_journey_normalization_and_scale(self):
+        self.assertAlmostEqual(carbon_case(1000, .03, 5), 1000 * carbon_case(1, .03, 5))
+        self.assertAlmostEqual(gasoline_kg_per_vehicle_km(10), 2 * gasoline_kg_per_vehicle_km(20))
 
 
 if __name__ == "__main__":

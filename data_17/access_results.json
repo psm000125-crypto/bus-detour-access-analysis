@@ -9,14 +9,36 @@
   "unresolved_of_22": 1,
   "distance_thresholds": "500/1000/1500m are analyst-selected planning sensitivity values, not disability cutoffs",
   "speeds": "0.5/0.8/1.2 m/s are assumed sensitivity values, not group measurements; walking only, no waiting or crossing delay",
-  "EPA_reference": {
-    "url": "https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle",
+  "domestic_carbon_reference": {
+    "url": "https://env-info.kr/v2/publish/testfiles/2024년%20환경정보공개제도%20등록%20가이드라인.pdf",
+    "title": "2024년 환경정보공개제도 등록 가이드라인",
     "checked_on": "2026-10-17",
-    "source_g_CO2_per_mile": 400,
-    "mile_km": 1.609344,
-    "scope": "US typical passenger vehicle tailpipe CO2; not Korean fleet or lifecycle"
+    "printed_pages": [
+      156,
+      157
+    ],
+    "pdf_pages_one_based": [
+      160,
+      161
+    ],
+    "gasoline_net_heat_MJ_L": 30.4,
+    "gasoline_CO2_kg_TJ": 69300,
+    "assumed_economy_km_L": [
+      10,
+      15,
+      20
+    ],
+    "main_economy_km_L": 15,
+    "main_factor_kg_CO2_vehicle_km": 0.14044800000000002,
+    "scope": "Fuel combustion CO2 component from domestic reporting guideline, with assumed fuel economy; not measured Korean fleet average, CH4/N2O or lifecycle"
   },
-  "carbon_scope": "100 target journeys, one occupant; 0/1/3/5% preventable car switching and 2/5/10km all assumed. Only avoided car component; subtract additional bus/shuttle/operations to assess net savings.",
+  "carbon_scope": "Per target journey, one occupant; 0/1/3/5% preventable car switching, 2/5/10km and 10/15/20km/L all assumed. Only avoided car CO2 component; multiply by measured target journeys and subtract additional operations for net savings.",
+  "h1000_tail_verification": {
+    "checked_origins": 21,
+    "tail_length_m": 886.6505068204275,
+    "max_residual_m": 1.9326762412674725e-12
+  },
+  "proposed_policy_trigger": "Attach mitigation plan if per-origin known destination access minus original-stop access exceeds 500m, or safety/step-free route remains unverified. Analyst-proposed review trigger, not a legal or disability limit; distinct from H500 location selection.",
   "input_sha256": {
     "data_13\\raw\\osm_medium_windows_response.txt": "6f7e2e9e4af739a4133b708f2c15a60984277aabbcf827c8e0ffe58a827d7444"
   },
@@ -66,7 +88,8 @@
       "max_D_policy_m": 3186.151517056082,
       "mean_L_change_vs_official_proxy_m": -2.2737367544323206e-13,
       "better_policy_journeys": 0,
-      "worse_policy_journeys": 0
+      "worse_policy_journeys": 0,
+      "above_proposed_L500_trigger": 21
     },
     {
       "scenario": "H500",
@@ -81,7 +104,8 @@
       "max_D_policy_m": 1797.659144055935,
       "mean_L_change_vs_official_proxy_m": -1268.6337504771218,
       "better_policy_journeys": 21,
-      "worse_policy_journeys": 0
+      "worse_policy_journeys": 0,
+      "above_proposed_L500_trigger": 1
     },
     {
       "scenario": "H1000",
@@ -96,7 +120,8 @@
       "max_D_policy_m": 2299.5010102356555,
       "mean_L_change_vs_official_proxy_m": -886.6505068204268,
       "better_policy_journeys": 21,
-      "worse_policy_journeys": 0
+      "worse_policy_journeys": 0,
+      "above_proposed_L500_trigger": 17
     }
   ]
 }
