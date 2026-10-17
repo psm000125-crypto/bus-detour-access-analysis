@@ -10,9 +10,14 @@ def main():
     commands=[
       ["data_13/recompute_expanded.py"],
       ["data_13/verify_review.py"],
+      ["data_14/analyze_decisions.py"],
+      ["data_14/verify_decisions.py"],
+      ["data_17/analyze_access.py"],
       ["-m","unittest","discover","-s","data_10","-p","test_walk_analysis.py","-v"],
       ["-m","unittest","discover","-s","data_11","-p","test_policy_models.py","-v"],
       ["-m","unittest","discover","-s","data_13","-p","test_review_models.py","-v"],
+      ["-m","unittest","discover","-s","data_14","-p","test_decisions.py","-v"],
+      ["-m","unittest","discover","-s","data_17","-p","test_access.py","-v"],
     ]
     for args in commands:
         subprocess.run([sys.executable,*args],cwd=root,check=True)

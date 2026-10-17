@@ -25,7 +25,19 @@ https://data.seoul.go.kr/dataList/OA-15067/A/1/datasetView.do
 https://www.suwon.go.kr/web/board/BD_board.view.do?bbsCd=1042&seq=20260402100206435
 CPBC 공식 기관 위치:
 https://web.cpbc.co.kr/company/page/page1-8.html
+광진구 같은 행사 공지·통제도(표시 등록일 2026-04-06, 행사 전 가용성 미확인):
+https://gwangjin.go.kr/portal/bbs/B0000001/view.do?deptId=100161&menuNo=200190&nttId=6570763&pSiteId=portal&pageIndex=1
+한국공항리무진 같은 행사 우회 공지:
+https://www.klimousine.com/center/notice_view.php?code=&idx=6393&page=1&ptype=view
 공지 이미지·민간 위치도·카카오맵 화면은 이 공개용 묶음에 포함하지 않았습니다.
+
+## 탄소 입력의 참고 계수
+
+US EPA, Greenhouse Gas Emissions from a Typical Passenger Vehicle.
+https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle
+확인 2026-10-17. 일반 승용차 배기관 CO2 약 400g/mile를 가정 계산에 참고했습니다.
+미국 참고값이며 한국 평균·전 과정 온실가스 계수 또는 정책 순감축량이 아닙니다.
+회피 자동차 전환율·거리는 관측값이 아닌 입력 가정입니다. data_17/README.md 참조.
 
 ## 스킬과 AI
 

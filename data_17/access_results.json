@@ -1,0 +1,102 @@
+{
+  "status": "hypothetical target locations and illustrative arithmetic, not operational alternatives or observed effects",
+  "targets_rule": "Existing non-step/corridor OSM node on official-proxy S-A shortest path nearest S distances 500/1000m; no outcome-based selection",
+  "fixed_notices": [
+    436868004,
+    5851251697
+  ],
+  "common_resolved_origins": 21,
+  "unresolved_of_22": 1,
+  "distance_thresholds": "500/1000/1500m are analyst-selected planning sensitivity values, not disability cutoffs",
+  "speeds": "0.5/0.8/1.2 m/s are assumed sensitivity values, not group measurements; walking only, no waiting or crossing delay",
+  "EPA_reference": {
+    "url": "https://www.epa.gov/greenvehicles/greenhouse-gas-emissions-typical-passenger-vehicle",
+    "checked_on": "2026-10-17",
+    "source_g_CO2_per_mile": 400,
+    "mile_km": 1.609344,
+    "scope": "US typical passenger vehicle tailpipe CO2; not Korean fleet or lifecycle"
+  },
+  "carbon_scope": "100 target journeys, one occupant; 0/1/3/5% preventable car switching and 2/5/10km all assumed. Only avoided car component; subtract additional bus/shuttle/operations to assess net savings.",
+  "input_sha256": {
+    "data_13\\raw\\osm_medium_windows_response.txt": "6f7e2e9e4af739a4133b708f2c15a60984277aabbcf827c8e0ffe58a827d7444"
+  },
+  "locations": [
+    {
+      "scenario": "official_proxy",
+      "node": "anchor_A",
+      "longitude": 126.98798554007168,
+      "latitude": 37.56419430457661,
+      "distance_from_S_m": 1901.3477450414707,
+      "mapped_adjacent_roads": "삼일대로",
+      "bus_operation_feasibility": "not verified",
+      "pedestrian_event_feasibility": "not verified"
+    },
+    {
+      "scenario": "H500",
+      "node": 5318242319,
+      "longitude": 126.9776799,
+      "latitude": 37.557908399999995,
+      "distance_from_S_m": 512.8553720413224,
+      "mapped_adjacent_roads": "퇴계로",
+      "bus_operation_feasibility": "not verified",
+      "pedestrian_event_feasibility": "not verified"
+    },
+    {
+      "scenario": "H1000",
+      "node": 5566643091,
+      "longitude": 126.9803692,
+      "latitude": 37.5614688,
+      "distance_from_S_m": 1014.6972382210427,
+      "mapped_adjacent_roads": "남대문로 / 남대문시장길",
+      "bus_operation_feasibility": "not verified",
+      "pedestrian_event_feasibility": "not verified"
+    }
+  ],
+  "summary": [
+    {
+      "scenario": "official_proxy",
+      "resolved": 21,
+      "unresolved_of_22": 1,
+      "mean_B_m": 419.39433667096625,
+      "mean_L_m": 1597.5078685930964,
+      "mean_E_m": 236.21538921445895,
+      "mean_D_known_m": 2016.9022052640628,
+      "max_D_known_m": 2581.441788213726,
+      "mean_D_policy_m": 2253.117594478522,
+      "max_D_policy_m": 3186.151517056082,
+      "mean_L_change_vs_official_proxy_m": -2.2737367544323206e-13,
+      "better_policy_journeys": 0,
+      "worse_policy_journeys": 0
+    },
+    {
+      "scenario": "H500",
+      "resolved": 21,
+      "unresolved_of_22": 1,
+      "mean_B_m": 419.39433667096625,
+      "mean_L_m": 328.87411811597474,
+      "mean_E_m": 116.3567666914338,
+      "mean_D_known_m": 748.268454786941,
+      "max_D_known_m": 1696.0596877561632,
+      "mean_D_policy_m": 864.6252214783748,
+      "max_D_policy_m": 1797.659144055935,
+      "mean_L_change_vs_official_proxy_m": -1268.6337504771218,
+      "better_policy_journeys": 21,
+      "worse_policy_journeys": 0
+    },
+    {
+      "scenario": "H1000",
+      "resolved": 21,
+      "unresolved_of_22": 1,
+      "mean_B_m": 419.39433667096625,
+      "mean_L_m": 710.8573617726698,
+      "mean_E_m": 236.2153892144588,
+      "mean_D_known_m": 1130.2516984436363,
+      "max_D_known_m": 1694.7912813932985,
+      "mean_D_policy_m": 1366.4670876580951,
+      "max_D_policy_m": 2299.5010102356555,
+      "mean_L_change_vs_official_proxy_m": -886.6505068204268,
+      "better_policy_journeys": 21,
+      "worse_policy_journeys": 0
+    }
+  ]
+}

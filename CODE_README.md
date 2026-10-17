@@ -1,7 +1,8 @@
 # 버스 임시우회 안내의 접근 부담 분석 코드
 
 공모전 분석보고서의 공개자료 감사·조건부 정책 비교 재현 자료입니다.
-현재 주 분석은 data_13/recompute_expanded.py, 검증은 data_13/verify_review.py입니다.
+공간 주 분석은 data_13/recompute_expanded.py, 안내 분석은 data_14/analyze_decisions.py,
+승차 접근 목표·보행속도·탄소 가정 보강은 data_17/analyze_access.py입니다.
 data_10·data_11 모듈은 필요한 공통 함수와 초기 모형 테스트를 제공합니다.
 
 ## 실행 환경과 실행
@@ -20,7 +21,7 @@ python -m venv .venv
 새 지도 취득·로그인·API 키·유료 AI 서비스가 필요하지 않습니다.
 의존 패키지는 requirements.txt에 고정했습니다. 가상환경 자체는 동봉하지 않았습니다.
 
-run_analysis.py는 확대 지도 재계산, 입력·표 정합성 검증과 모형 테스트 16개를 실행합니다.
+run_analysis.py는 확대 지도·부담 분해·수량·경로·인지 의존성·승차 접근 목표·보행속도·탄소 가정 재계산과 모형 테스트 26개를 실행합니다.
 설치가 끝난 기존 Python 3.12 환경에서는 바로 `python run_analysis.py`로 실행할 수 있습니다.
 기대하는 주 결과는 출입구 22개·계산 가능 21개·미연결 1개·후보 53개·2곳 조합 1,378개입니다.
 같은 추가 2곳에서 최대 E는 여정 수 우선 약 961.872m, 추가길이 부담 우선 약 649.483m입니다.
@@ -35,6 +36,12 @@ run_analysis.py는 확대 지도 재계산, 입력·표 정합성 검증과 모�
 - data_13/expanded_review_results.json: 원본 대조·고립 성분·입력 해시
 - data_13/verification_review.json: 계산 정합성 검증
 - data_13/README.md: 원본 취득·실패·한계·요청 시점과 서버 갱신 시점의 구분
+- data_14/README.md: B·L·E 분해, 안내 한계효과, 국소적 경로·인지 의존성의 계산과 한계
+- data_14/decision_results.json 및 *.csv: 새 분석 결과
+- data_14/verification_decisions.json: 이전 독립 인지 20개 값·분해 항등식·경로 정합성 검증
+- data_17/README.md: 위치 변경·보행속도·거리값·탄소 입력 가정과 해석 범위
+- data_17/*.csv 및 access_results.json: 접근 목표 시나리오·보행 부담·미국 EPA 참고 계수의 산술 결과
+- data_17/ai_source_recheck.csv: AI의 동일 원문 ID 재대조 기록. 사람 검수 정확도가 아님
 - BUNDLE_MANIFEST.json: 이 압축파일에 포함한 파일과 SHA-256
 - SOURCE_NOTICE.md: 데이터·스킬 출처와 이용 조건
 
@@ -55,5 +62,7 @@ GitHub에는 ZIP만 올리기보다 소스 파일을 폴더 구조대로 올려 
 공식 안내와 AI 활용 기록은 근거 설명을 위해 포함합니다. 기록에 등장하는 모든 과거 작업 파일을
 동봉한 것은 아닙니다. 사적 브라우저 정보·신청자 개인정보·가상환경·지도 서비스 화면 캡처는 없습니다.
 공지 이미지와 민간 위치도는 공개 재배포 묶음에 복제하지 않고 원문 URL로 안내합니다.
+추가 광진구 통제도와 공항리무진 공지 원본도 로컬 확인용으로만 보존하며 ZIP에는 포함하지 않습니다.
+추가 자료의 사실 전사·시점·상충 표기는 data_14/source_review.json에 있습니다.
 원본 출처의 정규·임시 승차를 구분한 사실 전사는 data_09/service_changes.json에 있습니다.
 data_10/analyze_walks.py의 초기 파이프라인 전체를 실행하는 묶음이 아니라 현재 분석을 재현하는 묶음입니다.
