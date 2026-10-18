@@ -1,0 +1,9 @@
+{
+  "avoidance_fraction_assumption": 0.01,
+  "car_km_assumption": 5,
+  "occupancy_assumption": 1,
+  "fuel_economy_km_per_litre_assumption": 15,
+  "tailpipe_CO2_g_per_vehicle_km": 140.44799999999998,
+  "gross_avoided_CO2_g_per_target_journey": 7.022399999999999,
+  "actual_net_reduction": false
+}

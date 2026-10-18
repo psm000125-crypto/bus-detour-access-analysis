@@ -1,0 +1,107 @@
+{
+  "recommended_policy": "equity",
+  "selection_order": [
+    "minimize maximum additional walking",
+    "minimize sum among equal maximum values"
+  ],
+  "recommended_candidates": [
+    5593950674,
+    "anchor_N3403067558"
+  ],
+  "scope": "Equally weighted modeled origin routes; not measured disability, age, income or passenger equity outcomes",
+  "comparisons": {
+    "efficiency": {
+      "max_E_m": {
+        "baseline": 1374.8995816154359,
+        "recommended": 1007.1569064858686,
+        "change_m": -367.74267512956726,
+        "change_percent": -26.746875193422394
+      },
+      "sum_E_m": {
+        "baseline": 7280.417147843372,
+        "recommended": 7327.355508369223,
+        "change_m": 46.93836052585084,
+        "change_percent": 0.6447207566911887
+      },
+      "max_D_m": {
+        "baseline": 3384.1820223229042,
+        "recommended": 3588.5986946995945,
+        "change_m": 204.41667237669026,
+        "change_percent": 6.040356902445175
+      },
+      "mean_E_m": {
+        "baseline": 330.92805217469873,
+        "recommended": 333.06161401678287,
+        "change_m": 2.1335618420841342,
+        "change_percent": 0.6447207566911901
+      },
+      "mean_D_m": {
+        "baseline": 2353.412039005187,
+        "recommended": 2355.54560084727,
+        "change_m": 2.133561842083054,
+        "change_percent": 0.09065823607263154
+      },
+      "route_counts": {
+        "better": 4,
+        "worse": 10,
+        "same": 8
+      }
+    },
+    "coverage_strong": {
+      "max_E_m": {
+        "baseline": 1392.7934194570423,
+        "recommended": 1007.1569064858686,
+        "change_m": -385.6365129711737,
+        "change_percent": -27.6879907374568
+      },
+      "sum_E_m": {
+        "baseline": 10282.95130595388,
+        "recommended": 7327.355508369223,
+        "change_m": -2955.5957975846577,
+        "change_percent": -28.742680089065022
+      },
+      "max_D_m": {
+        "baseline": 3401.536083245236,
+        "recommended": 3588.5986946995945,
+        "change_m": 187.06261145435838,
+        "change_percent": 5.49935696333673
+      },
+      "mean_E_m": {
+        "baseline": 467.4068775433582,
+        "recommended": 333.06161401678287,
+        "change_m": -134.3452635265753,
+        "change_percent": -28.742680089065015
+      },
+      "mean_D_m": {
+        "baseline": 2489.890864373846,
+        "recommended": 2355.54560084727,
+        "change_m": -134.34526352657576,
+        "change_percent": -5.395628597575529
+      },
+      "route_counts": {
+        "better": 11,
+        "worse": 11,
+        "same": 0
+      }
+    }
+  },
+  "recommended_mean_components_m": {
+    "ordinary_stop_approach": 518.5006114480656,
+    "boarding_location_change": 1503.9833753824225,
+    "late_information": 333.06161401678287,
+    "total": 2355.54560084727
+  },
+  "rounding": "Distance display nearest 10m, components and total independently rounded; percentages from raw values",
+  "late_information_share_of_added_distance_percent": 18.130291633505855,
+  "remedies": {
+    "new_routes_recomputed": false,
+    "extra_signs_or_budget_verified": false,
+    "condition": "Before adopting extra or moved signs, recompute all routes and costs; reject an option increasing the base maximum additional walking",
+    "actual_step_free_route_verified": false
+  },
+  "input_sha256": {
+    "results.json": "c13bcc35470a3e50d227e1c6dd8ea0cb72f0d34f714c919ce00a4a88892877b1",
+    "policy_summary.csv": "ac3df71de20bad661e7250556c4511b2359767959ddcf8d26216c6e857c27b30",
+    "journeys.csv": "405949b82e2c55791c60bd3aa50262fccbb61cb14e3452981d44d9d82208f5a3"
+  }
+}

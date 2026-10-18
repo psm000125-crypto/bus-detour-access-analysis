@@ -1,0 +1,77 @@
+{
+  "title": "서울역 버스 임시우회 안내 배치: 22개 출발점 비교",
+  "status": "conditional mapped-network analysis; not observed event-day walking or deployment advice",
+  "event_date": "2026-04-05",
+  "requested_osm_snapshot": "2026-04-04T22:00:00Z",
+  "osm_source": "raw/osm_initial.json",
+  "source_geographic_crs": "EPSG:4326",
+  "measurement_crs": "EPSG:32652",
+  "crs_note": "OSM geographic coordinates use WGS84. City page says WGS84 but also EPSG-5179; retain that metadata conflict and treat its interpretation as provisional. City coordinates are used only for locating the old-stop proxy, not to certify a datum transformation.",
+  "origins": [
+    {
+      "id": "O2",
+      "osm_node_id": 3403067559,
+      "label": "서울역 2번 출구 인근(OSM 1호선 표기)"
+    },
+    {
+      "id": "O4",
+      "osm_node_id": 3403067553,
+      "label": "서울역 4번 출구 인근(OSM)"
+    },
+    {
+      "id": "O9",
+      "osm_node_id": 3403067558,
+      "label": "서울역 9번 출구 인근(OSM)"
+    }
+  ],
+  "original_stop": {
+    "id": "S",
+    "ars_id": "02006",
+    "label": "서울역 환승센터 02006 인근"
+  },
+  "alternative": {
+    "id": "A",
+    "label": "CPBC 건물 앞 지도상 대체지점",
+    "osm_building_way_id": 404201566,
+    "method": "project building centroid onto nearest eligible street-level mapped line, excluding access-controlled ways, steps and corridors as anchor targets",
+    "actual_temporary_waiting_position_verified": false,
+    "frontage_sensitivity_m": [
+      -20,
+      0,
+      20
+    ],
+    "sensitivity_rule": "shift the building-centroid target north/south by 20 projected metres, then apply the same nearest street-level projection; deterministic scenarios, not confidence bounds"
+  },
+  "max_proxy_offset_m": 100,
+  "anchor_rule": "street-level proxy anchors may not land on steps or indoor corridors; select by geometric distance, never by component connectivity or desired result",
+  "candidate_radius_from_S_m": 450,
+  "candidate_rule": "origin-to-S mapped shortest-path nodes at junctions (degree>=3) and origin anchors; exclude S and all locations whose only incident ways are steps/corridors",
+  "notice_model": "Retain the original-stop notice; choose zero, one or two additional notices on fixed mapped shortest approach paths. Read and follow the first encountered notice.",
+  "objective": "lexicographic minimum of maximum excess mapped length, total excess mapped length, candidate ID",
+  "units": "metres between projected mapped anchors; real entrance/kerb connectors, waiting, time, fares and personal demand excluded",
+  "do_not_infer": [
+    "historical actual pedestrian legality",
+    "actual sign visibility or comprehension",
+    "actual replacement stop kerb position",
+    "wheelchair accessibility",
+    "passenger counts",
+    "time saved",
+    "carbon savings"
+  ],
+  "network_source": "raw/osm_network.json",
+  "entrance_radius_m": 500,
+  "additional_notices": [
+    0,
+    1,
+    2
+  ],
+  "origin_rule": "All subway entrance nodes within 500m of the original stop in the archived network, selected without a connectivity filter.",
+  "comparison_policies": [
+    "coverage_strong",
+    "efficiency",
+    "equity",
+    "total_distance_equity"
+  ],
+  "recommended_policy": "equity",
+  "passenger_platform_rule": "Include open bus=yes public_transport=platform highway=platform lines with shared nodes; preserve access, foot, area and directional restrictions; exclude closed outlines."
+}

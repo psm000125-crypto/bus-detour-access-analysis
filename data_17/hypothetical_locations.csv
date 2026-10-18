@@ -1,4 +1,0 @@
-﻿scenario,node,longitude,latitude,distance_from_S_m,mapped_adjacent_roads,bus_operation_feasibility,pedestrian_event_feasibility
-official_proxy,anchor_A,126.98798554007168,37.56419430457661,1901.3477450414707,삼일대로,not verified,not verified
-H500,5318242319,126.9776799,37.557908399999995,512.8553720413224,퇴계로,not verified,not verified
-H1000,5566643091,126.9803692,37.5614688,1014.6972382210427,남대문로 / 남대문시장길,not verified,not verified

@@ -1,1 +1,0 @@
-notice_id,case_id,participant_id,condition,assigned_group,start_time,end_time,elapsed_seconds,human_active_seconds,ai_wait_seconds,correction_count,final_quality_passed,interruption_note

@@ -1,21 +1,10 @@
-# 버스 임시우회 안내의 접근 부담 분석 코드
+# 분석 코드 실행 안내
 
-공모전 분석보고서의 공개자료 감사·조건부 정책 비교 재현 자료입니다.
-현재 보고서의 공간·정책·접근성 주 분석은 data_29/reanalyze_platforms.py입니다.
-버스 승객용 선형 승강장을 포함하여 9-1출구 연결과 기존 승차지 위치를 수정한 22개 출발점 모형입니다.
-data_13·14·17·28은 이전 21개 모형의 보존 결과이며 현재 본문과 수치를 섞으면 안 됩니다.
-data_10·data_11 모듈은 필요한 공통 함수와 초기 모형 테스트를 제공합니다.
+이 저장소는 보고서의 **22개 출발점 모형**을 재현합니다. 입력과 결과는 `data/`, 계산 코드는 `analysis/`, 단위 테스트는 `tests/`에 모았습니다.
 
-최신 보고서의 본문·표·그림·참고문헌은 [REPORT.md](REPORT.md)에서 읽을 수 있습니다.
-권고안은 기존 정류소 안내만 있는 현행 비교모형 대비 최대 추가보행을 약 1,600m에서 1,010m로 37% 줄입니다.
-현행 대비 11개 경로가 짧아지고 11개는 같으며, 더 길어지는 경로는 없습니다.
-합계 최소안 대비 최대 추가보행 감소율은 약 27%로, 37%와 비교 기준이 다릅니다.
+## 실행 환경
 
-## 실행 환경과 실행
-
-검증 환경은 Windows, Python 3.12입니다. Windows 기본 맑은 고딕을 그림에 사용합니다.
-다른 운영체제에서는 한글 폰트를 준비해야 그림의 한글이 정상 표시됩니다.
-숫자 계산과 지리적 사실 검증은 구분합니다.
+Python 3.12와 `requirements.txt`의 고정 버전을 사용합니다. 가상환경을 만드는 Windows 실행 예시는 다음과 같습니다.
 
 ```powershell
 python -m venv .venv
@@ -23,63 +12,44 @@ python -m venv .venv
 .venv/Scripts/python.exe run_analysis.py
 ```
 
-패키지 설치에는 인터넷이 필요합니다. 이후 주 분석·검증은 동봉한 원본만 사용하며
-새 지도 취득·로그인·API 키·유료 AI 서비스가 필요하지 않습니다.
-의존 패키지는 requirements.txt에 고정했습니다. 가상환경 자체는 동봉하지 않았습니다.
+의존성 설치에는 인터넷 연결이 필요합니다. 이후 분석은 동봉 입력자료만 읽으며 로그인·API 키·AI 서비스 호출이 필요하지 않습니다. 실행 시 `data/results/`의 계산 결과를 갱신합니다. 보고서 그림은 `assets/`에서 확인할 수 있습니다.
 
-run_analysis.py는 이전 모형의 보존 검증, data_29의 최신 22개 출발점 분석과 독립 조합 열거·88행 직접 경로 검산,
-검토서 초안 생성과 모형 테스트 39개를 실행합니다.
-설치가 끝난 기존 Python 3.12 환경에서는 바로 `python run_analysis.py`로 실행할 수 있습니다.
-최신 주 결과는 출입구 22개·계산 가능 22개·후보 50개·2곳 조합 1,225개입니다.
-같은 추가 2곳에서 최대 추가보행은 도달 경로 수 우선 1,392.793m, 최댓값 최소 1,007.157m입니다.
-후자는 전자보다 11개 경로가 짧고 11개는 깁니다. 수량별 위치를 다시 고르는 비교이며 실제 승객 효과가 아닙니다.
+## 실행 순서
 
-## 확인할 파일
+`run_analysis.py`는 아래 작업을 차례로 실행하고 실패 시 중단합니다.
 
-- data_13/review_policy_summary.csv: 범위·대체점·수량별 정책 지표
-- data_13/review_journeys.csv: 미해결 행을 포함한 여정별 결과
-- data_13/review_distribution.csv: 같은 수량 대조군 대비 손익
-- data_13/review_recognition*.csv: 가정 인지확률별 기대 지표
-- data_13/expanded_review_results.json: 원본 대조·고립 성분·입력 해시
-- data_13/verification_review.json: 계산 정합성 검증
-- data_13/README.md: 원본 취득·실패·한계·요청 시점과 서버 갱신 시점의 구분
-- data_14/README.md: B·L·E 분해, 안내 한계효과, 국소적 경로·인지 의존성의 계산과 한계
-- data_14/decision_results.json 및 *.csv: 새 분석 결과
-- data_14/verification_decisions.json: 이전 독립 인지 20개 값·분해 항등식·경로 정합성 검증
-- data_17/README.md: 위치 변경·보행속도·거리값·탄소 입력 가정과 해석 범위
-- data_17/*.csv 및 access_results.json: 접근 목표·보행 부담·H1000 거리 가산성과 국내 지침·가정 연비를 결합한 대상 여정당 CO2
-- data_17/ai_source_recheck.csv: AI의 동일 원문 ID 재대조 기록. 사람 검수 정확도가 아님
-- data_28/README.md 및 accessibility_results.json: 고정 출입구에서 계단·휠체어 제한을 반영한 지도 점검과 결측
-- data_28/review_drafts.json 및 검토서_초안.md: 기존 AI 전사 2건에서 생성한 검토 초안. 새 모델 호출·독립 정확도 평가가 아님
-- data_29/README.md 및 results.json: 현재 22개 출발점 모형·승객용 승강장 포함 규칙·정책 비교·접근성
-- data_29/peer_policy_verification.json: 1,225개 조합의 별도 열거와 88행 직접 최단경로 평가 대조
-- data_30/README.md: OSM 휠체어 접근 항목의 원본 재집계, 별도 AI 성능 평가 절차와 빈 기록 양식
-- data_31/README.md: 권고 규칙·공식 시설 교차 확인·공지 5건 25항목의 별도 에이전트 대조·탄소 계산 예시
-- data_31/verify_revision_evidence.py: 새 AI 호출 없이 보존된 대조표·정책 손익·탄소 가정 검산
-- data_33/README.md 및 verify_policy_choice.py: 최대 추가보행 최소 최종 권고·대조 기준별 경로 손익·검산. data_31 정책 선택은 수정31 당시 기록
-- data_34/README.md 및 verify_baselines.py: 추가 안내 도달11개와 기존정류소안내대비11개개선·11개동일·0개악화, 세 비교 기준 검산
-- BUNDLE_MANIFEST.json: 이 압축파일에 포함한 파일과 SHA-256
-- SOURCE_NOTICE.md: 데이터·스킬 출처와 이용 조건
+| 순서 | 모듈 | 내용 |
+|---|---|---|
+| 1 | `analysis.model` | 보행망 구성, 22개 출발점·50개 후보의 정책 비교와 접근 제한 점검 |
+| 2 | `analysis.verify_routes` | 1,225개 조합의 별도 열거, 네 정책 88행의 직접 최단경로 대조 |
+| 3 | `analysis.verify_policy` | 최종 권고안과 다른 배치의 최대·합계·경로별 손익 검산 |
+| 4 | `analysis.verify_baselines` | 기존 안내·도달수 우선·합계 최소의 세 비교 기준 검산 |
+| 5 | `analysis.verify_sources` | TOPIS 공지 25개 항목의 추출 대조와 탄소 산술 예시 확인 |
+| 6 | `tests/` | 투영·접근 제한·안내 순서·정책 선택·승강장 연결의 단위 테스트 |
 
-## 공개 설명과 재현자료
+개별 모듈도 저장소 루트에서 실행할 수 있습니다.
 
-공개 저장소는 https://github.com/psm000125-crypto/bus-detour-access-analysis 입니다.
-README.md는 핵심 결과와 비교 기준, REPORT.md는 최신 보고서 본문과 참고문헌,
-이 문서는 실행 방법을 설명합니다. data_29·31·33·34에는 원값과 검증 근거가 있습니다.
-과거 수정의 기록은 당시 판단을 보존한 자료이며, 현재 권고는 최대 추가보행 최소 배치입니다.
-ZIP은 같은 공개 파일을 묶은 로컬 재현용 자료로, 예선 공식 필수·허용 첨부로 확인된 것은 아닙니다.
+```powershell
+python -m analysis.model
+python -m analysis.verify_routes
+python -m unittest discover -s tests -v
+```
 
-## 해석과 포함 범위
+## 주요 결과 파일
 
-일반도로 보행·지도 대체점·고정 접근 경로를 가정한 모형입니다.
-실제 보도·횡단·행사 통제·역사적 임시 대기 위치·수요·인지율은 미확인입니다.
-모형 테스트가 실제 보행이나 정책 효과를 인증하지 않습니다.
-명시 보행선만의 모형은 확대 지도에서도 공동 비교 경로가 부족했습니다.
+| `data/results/` 파일 | 내용 |
+|---|---|
+| `policy_summary.csv` | 네 정책의 최대·합계·평균 거리와 안내 도달 경로 수 |
+| `journeys.csv` | 네 정책 × 22개 출발점의 거리·안내 만남·개선량 |
+| `budget.csv` | 안내 0·1·2곳에서 위치를 다시 선택한 비교 |
+| `baseline_differences.csv` | 세 비교 기준별 출발점의 개선·동일·악화 |
+| `accessibility.csv` | 계단·명시된 접근 제한을 제외한 지도상 경로 결과 |
+| `location_sensitivity.csv` | 지도상 승차 지점 변경의 보조 시나리오 |
+| `results.json` | 선정 위치·정책 지표·접근성 요약·원자료 해시 |
+| `peer_policy_verification.json` | 별도 조합 열거 및 직접 경로 계산의 대조 결과 |
+| `policy_choice.json`, `baseline_results.json` | 최종 권고와 비교 기준의 검산 결과 |
+| `ai_evaluation.json`, `carbon_example.json` | 공지 추출 대조와 가정에 따른 CO2 계산 예시 |
 
-공식 안내와 AI 활용 기록은 근거 설명을 위해 포함합니다. 기록에 등장하는 모든 과거 작업 파일을
-동봉한 것은 아닙니다. 사적 브라우저 정보·신청자 개인정보·가상환경·지도 서비스 화면 캡처는 없습니다.
-공지 이미지와 민간 위치도는 공개 재배포 묶음에 복제하지 않고 원문 URL로 안내합니다.
-추가 광진구 통제도와 공항리무진 공지 원본도 로컬 확인용으로만 보존하며 ZIP에는 포함하지 않습니다.
-추가 자료의 사실 전사·시점·상충 표기는 data_14/source_review.json에 있습니다.
-원본 출처의 정규·임시 승차를 구분한 사실 전사는 data_09/service_changes.json에 있습니다.
-data_10/analyze_walks.py의 초기 파이프라인 전체를 실행하는 묶음이 아니라 현재 분석을 재현하는 묶음입니다.
+거리 단위는 m입니다. `D_known_m`은 미리 대체 지점을 알고 이동하는 거리, `D_stop_m`은 기존 정류소에서 처음 안내를 받는 거리, `D_policy_m`은 선택한 안내를 적용한 거리입니다. `E_policy_m = D_policy_m - D_known_m`으로 추가보행을 계산합니다. `B_m`은 평소 정류소 접근거리, `L_m`은 승차지 변경으로 늘어난 거리이며 `D_policy_m = B_m + L_m + E_policy_m`입니다.
+
+`BUNDLE_MANIFEST.json`은 배포 시 파일별 SHA-256을 기록합니다. 실행에 따라 결과 파일을 재저장하면 직렬화 방식 등에 따라 파일 해시가 달라질 수 있으므로, 수치와 배포 파일의 동일성은 구분해 확인합니다.

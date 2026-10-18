@@ -142,7 +142,7 @@ BTS 행사 86개 노선, 서소문고가 31개 노선처럼 여러 노선이 함
 
 [7] CPBC. 회사 위치 안내. https://web.cpbc.co.kr/company/page/page1-8.html . 건물 식별에 활용.
 
-[8] 서울특별시 TOPIS. 버스 우회 공지 5건(게시물 6237·6236·6228·6225·6223), 게시 2026-10-12~16. https://topis.seoul.go.kr/notice/openNoticeList.do . 원문 전사·선정 규칙·대조표는 data_31에 보존.
+[8] 서울특별시 TOPIS. 버스 우회 공지 5건(게시물 6237·6236·6228·6225·6223), 게시 2026-10-12~16. https://topis.seoul.go.kr/notice/openNoticeList.do . 원문 전사·선정 규칙·대조표는 data/ai_notice_extraction.json에 수록.
 
 [9] 서울특별시. 광화문 BTS 컴백행사 종합교통대책. 2026-03-18. https://www.seoul.go.kr/news/news_report.do?nttNo=454433 . 총 86개 노선 우회 계획.
 
@@ -154,6 +154,6 @@ BTS 행사 86개 노선, 서소문고가 31개 노선처럼 여러 노선이 함
 
 ### 분석코드와 재현자료
 
-공간 분석의 재현 기준은 data_29의 22개 출발점 모형이다. 공식 시설·공지 추출 대조는 data_31, 최종 권고는 data_33, 세 비교 기준과 추가 안내 도달 검산은 data_34에 정리했으며, 코드·입력·결과표는 아래 공개 저장소에서 열람할 수 있다.
+공간 분석은 서울역 주변 출발점 22곳을 기준으로 한다. 분석 자료는 data/, 계산 코드는 analysis/, 검증 코드는 tests/에 수록했다. data/README.md에서 입력자료와 결과표의 구성을, AI_USAGE.md에서 AI 활용 범위를 확인할 수 있다. 코드·입력·결과표는 아래 공개 저장소에서 열람할 수 있다.
 
 [공개 재현 코드](https://github.com/psm000125-crypto/bus-detour-access-analysis)

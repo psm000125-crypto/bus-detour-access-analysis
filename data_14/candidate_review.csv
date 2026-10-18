@@ -1,7 +1,0 @@
-﻿candidate_osm_node,lon,lat,mapped_road_names,mapped_highway_types,physical_installation_permission,directional_visibility,pedestrian_crossing_during_event,safe_waiting_space
-436868004,126.9731011,37.5557531,퇴계로 / 한강대로,primary / primary_link,unverified,unverified,unverified,unverified
-3390980819,126.9730538,37.5544083,이름 미기록 / 한강대로 / 후암로60길,primary / primary_link / residential,unverified,unverified,unverified,unverified
-5593950670,126.9728969,37.556863,퇴계로 / 한강대로,primary,unverified,unverified,unverified,unverified
-5593950685,126.9717731,37.5575519,통일로,primary,unverified,unverified,unverified,unverified
-5851251697,126.9743883,37.5565874,이름 미기록 / 퇴계로,primary / primary_link,unverified,unverified,unverified,unverified
-11449716078,126.9768075,37.5575116,이름 미기록 / 퇴계로,primary / service,unverified,unverified,unverified,unverified

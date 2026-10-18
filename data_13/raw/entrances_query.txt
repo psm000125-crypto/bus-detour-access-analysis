@@ -1,1 +1,0 @@
-[out:json][timeout:35][date:"2026-04-04T22:00:00Z"];node["railway"="subway_entrance"](37.545,126.958,37.578,127.003);out body;

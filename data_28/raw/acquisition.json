@@ -1,7 +1,0 @@
-{
-  "endpoint": "https://maps.mail.ru/osm/tools/overpass/api/interpreter",
-  "query": "[out:json][timeout:35][date:\"2026-04-04T22:00:00Z\"];nwr[\"highway\"=\"elevator\"](37.545,126.958,37.578,127.003);out center body;",
-  "acquired_at_utc": "2026-10-18T01:07:17.839339+00:00",
-  "success": false,
-  "error": "<urlopen error [Errno 11001] getaddrinfo failed>"
-}
