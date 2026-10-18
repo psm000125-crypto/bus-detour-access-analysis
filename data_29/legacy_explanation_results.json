@@ -1,0 +1,126 @@
+{
+  "same_two_signs_improved_origins": [
+    {
+      "origin": "N3403067548",
+      "label": "회현역 5번출구",
+      "E_policy_m_coverage": 961.8721850220206,
+      "E_policy_m_worst": 649.4832538210364,
+      "reduction_vs_coverage_m": 312.3889312009842
+    },
+    {
+      "origin": "N3403067549",
+      "label": "회현역 4번출구",
+      "E_policy_m_coverage": 921.7568192086472,
+      "E_policy_m_worst": 609.3678880076634,
+      "reduction_vs_coverage_m": 312.3889312009835
+    }
+  ],
+  "same_two_signs_unchanged": 19,
+  "coverage_encounter_without_distance_reduction": 8,
+  "second_sign_max_delay_improvement_m": 16.406195752876783,
+  "second_sign_additional_improved_origins": 11,
+  "barrier_origins": [
+    {
+      "origin": "N3390512293",
+      "label": "서울역 1번출구 (GTX-A)",
+      "mapped_stair_length_m": 25.27295392477848,
+      "stair_way_ids": [
+        331947404
+      ],
+      "stair_tags": {
+        "331947404": {
+          "highway": "steps",
+          "source": "survey"
+        }
+      },
+      "stair_node_ids": [
+        3390511096,
+        3390511996,
+        7311229156
+      ],
+      "baseline_length_m": 2145.116280433262
+    },
+    {
+      "origin": "N3403067568",
+      "label": "서울역 2번출구 (공항철도역)",
+      "mapped_stair_length_m": 25.27295392477848,
+      "stair_way_ids": [
+        331947404
+      ],
+      "stair_tags": {
+        "331947404": {
+          "highway": "steps",
+          "source": "survey"
+        }
+      },
+      "stair_node_ids": [
+        3390511096,
+        3390511996,
+        7311229156
+      ],
+      "baseline_length_m": 2130.238174397213
+    },
+    {
+      "origin": "N5348913429",
+      "label": "출입구 1",
+      "mapped_stair_length_m": 152.9382165162081,
+      "stair_way_ids": [
+        767089223,
+        769627453,
+        769627454,
+        769627455,
+        781442235,
+        1214966548
+      ],
+      "stair_tags": {
+        "767089223": {
+          "highway": "steps"
+        },
+        "769627453": {
+          "highway": "steps"
+        },
+        "769627454": {
+          "highway": "steps"
+        },
+        "769627455": {
+          "highway": "steps"
+        },
+        "781442235": {
+          "highway": "steps"
+        },
+        "1214966548": {
+          "highway": "steps",
+          "layer": "1"
+        }
+      },
+      "stair_node_ids": [
+        7163282906,
+        7163282909,
+        7163282910,
+        7163332416,
+        7163332417,
+        7163332424,
+        7184051642,
+        7184051645,
+        7184051646,
+        7184051647,
+        7184051649,
+        7184051650,
+        7184051651,
+        7295706166,
+        7295706169,
+        7295706171,
+        7295706174,
+        7296631504,
+        9865231802,
+        9865231803,
+        9865231805
+      ],
+      "baseline_length_m": 2302.4995884331556
+    }
+  ],
+  "scope": "Explanatory audit of existing fixed-anchor scenarios; not new field measurements or a repaired routing network.",
+  "input_sha256": {
+    "data_13\\raw\\osm_medium_windows_response.txt": "6f7e2e9e4af739a4133b708f2c15a60984277aabbcf827c8e0ffe58a827d7444"
+  }
+}

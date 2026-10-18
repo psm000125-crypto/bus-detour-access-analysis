@@ -1,0 +1,351 @@
+{
+  "model": "historical mapped network with linear bus passenger platforms included; no artificial connectors",
+  "selected": 22,
+  "resolved": 22,
+  "unresolved": [],
+  "candidate_count": 50,
+  "combinations": {
+    "1": 50,
+    "2": 1225
+  },
+  "policies": {
+    "1": {
+      "coverage_strong": {
+        "candidates": [
+          3390512593
+        ],
+        "covered": 22,
+        "max_E_m": 1501.6902281754044,
+        "sum_E_m": 12569.784289039482,
+        "max_D_m": 3510.432891963598
+      },
+      "efficiency": {
+        "candidates": [
+          5593950674
+        ],
+        "covered": 7,
+        "max_E_m": 1579.3162539921261,
+        "sum_E_m": 10142.250561117036,
+        "max_D_m": 3588.5986946995945
+      },
+      "equity": {
+        "candidates": [
+          3390512493
+        ],
+        "covered": 21,
+        "max_E_m": 1392.7934194570423,
+        "sum_E_m": 10378.471169612207,
+        "max_D_m": 3401.536083245236
+      },
+      "total_distance_equity": {
+        "candidates": [
+          3390512493
+        ],
+        "covered": 21,
+        "max_E_m": 1392.7934194570423,
+        "sum_E_m": 10378.471169612207,
+        "max_D_m": 3401.536083245236
+      }
+    },
+    "2": {
+      "coverage_strong": {
+        "candidates": [
+          3390512493,
+          3390512593
+        ],
+        "covered": 22,
+        "max_E_m": 1392.7934194570423,
+        "sum_E_m": 10282.95130595388,
+        "max_D_m": 3401.536083245236
+      },
+      "efficiency": {
+        "candidates": [
+          3390512493,
+          5593950674
+        ],
+        "covered": 21,
+        "max_E_m": 1374.8995816154359,
+        "sum_E_m": 7280.417147843372,
+        "max_D_m": 3384.1820223229042
+      },
+      "equity": {
+        "candidates": [
+          5593950674,
+          "anchor_N3403067558"
+        ],
+        "covered": 11,
+        "max_E_m": 1007.1569064858686,
+        "sum_E_m": 7327.355508369223,
+        "max_D_m": 3588.5986946995945
+      },
+      "total_distance_equity": {
+        "candidates": [
+          3390512493,
+          5593950674
+        ],
+        "covered": 21,
+        "max_E_m": 1374.8995816154359,
+        "sum_E_m": 7280.417147843372,
+        "max_D_m": 3384.1820223229042
+      }
+    }
+  },
+  "summary": [
+    {
+      "policy": "coverage_strong",
+      "candidates": [
+        3390512493,
+        3390512593
+      ],
+      "covered": 22,
+      "max_E_m": 1392.7934194570423,
+      "sum_E_m": 10282.95130595388,
+      "max_D_m": 3401.536083245236,
+      "improved_vs_stop": 22,
+      "encountered_without_reduction": 0,
+      "mean_B_m": 518.5006114480656,
+      "mean_L_m": 1503.9833753824225,
+      "mean_E_m": 467.4068775433582,
+      "mean_D_m": 2489.890864373846,
+      "mean_known_m": 2022.4839868304878,
+      "location_share_added": 0.7629049464713189
+    },
+    {
+      "policy": "efficiency",
+      "candidates": [
+        3390512493,
+        5593950674
+      ],
+      "covered": 21,
+      "max_E_m": 1374.8995816154359,
+      "sum_E_m": 7280.417147843372,
+      "max_D_m": 3384.1820223229042,
+      "improved_vs_stop": 21,
+      "encountered_without_reduction": 0,
+      "mean_B_m": 518.5006114480656,
+      "mean_L_m": 1503.9833753824225,
+      "mean_E_m": 330.92805217469873,
+      "mean_D_m": 2353.412039005187,
+      "mean_known_m": 2022.4839868304878,
+      "location_share_added": 0.8196490319888223
+    },
+    {
+      "policy": "equity",
+      "candidates": [
+        5593950674,
+        "anchor_N3403067558"
+      ],
+      "covered": 11,
+      "max_E_m": 1007.1569064858686,
+      "sum_E_m": 7327.355508369223,
+      "max_D_m": 3588.5986946995945,
+      "improved_vs_stop": 11,
+      "encountered_without_reduction": 0,
+      "mean_B_m": 518.5006114480656,
+      "mean_L_m": 1503.9833753824225,
+      "mean_E_m": 333.06161401678287,
+      "mean_D_m": 2355.54560084727,
+      "mean_known_m": 2022.4839868304878,
+      "location_share_added": 0.8186970836649414
+    },
+    {
+      "policy": "total_distance_equity",
+      "candidates": [
+        3390512493,
+        5593950674
+      ],
+      "covered": 21,
+      "max_E_m": 1374.8995816154359,
+      "sum_E_m": 7280.417147843372,
+      "max_D_m": 3384.1820223229042,
+      "improved_vs_stop": 21,
+      "encountered_without_reduction": 0,
+      "mean_B_m": 518.5006114480656,
+      "mean_L_m": 1503.9833753824225,
+      "mean_E_m": 330.92805217469873,
+      "mean_D_m": 2353.412039005187,
+      "mean_known_m": 2022.4839868304878,
+      "location_share_added": 0.8196490319888223
+    }
+  ],
+  "budget": [
+    {
+      "additional_notices": 0,
+      "candidates": [],
+      "covered": 0,
+      "max_E_m": 1597.2100918337326,
+      "sum_E_m": 14671.221289522704,
+      "max_D_m": 3605.9527556219264,
+      "improved_journeys": 0,
+      "marginal_max_E_reduction_m": null
+    },
+    {
+      "additional_notices": 1,
+      "candidates": [
+        3390512493
+      ],
+      "covered": 21,
+      "max_E_m": 1392.7934194570423,
+      "sum_E_m": 10378.471169612207,
+      "max_D_m": 3401.536083245236,
+      "improved_journeys": 21,
+      "marginal_max_E_reduction_m": 204.41667237669026
+    },
+    {
+      "additional_notices": 2,
+      "candidates": [
+        5593950674,
+        "anchor_N3403067558"
+      ],
+      "covered": 11,
+      "max_E_m": 1007.1569064858686,
+      "sum_E_m": 7327.355508369223,
+      "max_D_m": 3588.5986946995945,
+      "improved_journeys": 11,
+      "marginal_max_E_reduction_m": 385.6365129711737
+    }
+  ],
+  "same_two_signs": {
+    "better": 11,
+    "same": 0,
+    "worse": 11
+  },
+  "improved_origins": [
+    {
+      "origin": "N3403067548",
+      "label": "회현역 5번출구",
+      "coverage_E_m": 1392.7934194570423,
+      "worst_E_m": 950.214273490066,
+      "distance_reduction_vs_coverage_m": 442.5791459669763
+    },
+    {
+      "origin": "N3403067549",
+      "label": "회현역 4번출구",
+      "coverage_E_m": 1374.8995816154359,
+      "worst_E_m": 875.5924908051727,
+      "distance_reduction_vs_coverage_m": 499.30709081026316
+    },
+    {
+      "origin": "N3403067552",
+      "label": "서울역 3번출구",
+      "coverage_E_m": 638.103661494388,
+      "worst_E_m": 195.52451552741172,
+      "distance_reduction_vs_coverage_m": 442.5791459669763
+    },
+    {
+      "origin": "N3403067553",
+      "label": "서울역 4번출구",
+      "coverage_E_m": 649.1821041130813,
+      "worst_E_m": 206.60295814610458,
+      "distance_reduction_vs_coverage_m": 442.57914596697674
+    },
+    {
+      "origin": "N3403067554",
+      "label": "서울역 5번출구",
+      "coverage_E_m": 576.9146615557513,
+      "worst_E_m": 134.33551558877457,
+      "distance_reduction_vs_coverage_m": 442.57914596697674
+    },
+    {
+      "origin": "N3403067555",
+      "label": "서울역 7번출구",
+      "coverage_E_m": 659.5154069491771,
+      "worst_E_m": 216.93626098220057,
+      "distance_reduction_vs_coverage_m": 442.5791459669765
+    },
+    {
+      "origin": "N3403067556",
+      "label": "서울역 6번출구",
+      "coverage_E_m": 586.3036844182511,
+      "worst_E_m": 143.72453845127438,
+      "distance_reduction_vs_coverage_m": 442.57914596697674
+    },
+    {
+      "origin": "N3403067557",
+      "label": "서울역 8번출구",
+      "coverage_E_m": 568.8866488646092,
+      "worst_E_m": 69.57955805434608,
+      "distance_reduction_vs_coverage_m": 499.30709081026316
+    },
+    {
+      "origin": "N3403067558",
+      "label": "서울역 9번출구",
+      "coverage_E_m": 499.30709081026316,
+      "worst_E_m": 0.0,
+      "distance_reduction_vs_coverage_m": 499.30709081026316
+    },
+    {
+      "origin": "N3403067567",
+      "label": "서울역 3번출구",
+      "coverage_E_m": 886.6864921385368,
+      "worst_E_m": 444.1073461715605,
+      "distance_reduction_vs_coverage_m": 442.5791459669763
+    },
+    {
+      "origin": "N5348913429",
+      "label": "출입구 1",
+      "coverage_E_m": 635.6899053607881,
+      "worst_E_m": 136.38281455052493,
+      "distance_reduction_vs_coverage_m": 499.30709081026316
+    }
+  ],
+  "accessibility_status_counts": {
+    "mapped_route_needs_field_check": 18,
+    "no_route_without_steps": 3,
+    "entrance_restricted": 1
+  },
+  "wheelchair_tag_counts": {
+    "unknown": 20,
+    "no": 1,
+    "yes": 1
+  },
+  "stairs": [
+    {
+      "origin": "N3390512293",
+      "label": "서울역 1번출구 (GTX-A)",
+      "steps_m": 25.27295392477848,
+      "ways": [
+        331947404
+      ]
+    },
+    {
+      "origin": "N3403067568",
+      "label": "서울역 2번출구 (공항철도역)",
+      "steps_m": 25.27295392477848,
+      "ways": [
+        331947404
+      ]
+    },
+    {
+      "origin": "N5348913429",
+      "label": "출입구 1",
+      "steps_m": 152.9382165162081,
+      "ways": [
+        767089223,
+        769627453,
+        769627454,
+        769627455,
+        781442235,
+        1214966548
+      ]
+    }
+  ],
+  "edges_removed_for_access": 582,
+  "nodes_removed_for_access": 8,
+  "entrance_9_1": {
+    "to_S_m": 64.36419302301235,
+    "to_A_m": 2139.7013997254116,
+    "path_to_S": [
+      3390524793,
+      3390512593,
+      11178746139,
+      5589801223,
+      "anchor_S"
+    ]
+  },
+  "official_extra_gt1000": 20,
+  "official_extra_gt500": 22,
+  "S_A_m": 2170.857070360728,
+  "input_sha256": "6f7e2e9e4af739a4133b708f2c15a60984277aabbcf827c8e0ffe58a827d7444",
+  "limits": "Street walking and projected anchors assumed. Map connection is not event-day field access, elevator operation or wheelchair boarding certification."
+}

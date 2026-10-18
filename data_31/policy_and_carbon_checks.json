@@ -1,0 +1,52 @@
+{
+  "default_policy": "efficiency",
+  "default_candidates": [
+    3390512493,
+    5593950674
+  ],
+  "sum_reduction_vs_coverage_m": 3002.5341581105085,
+  "sum_reduction_vs_coverage_percent": 29.199147878605885,
+  "maximum_total_distance_is_lowest_among_displayed_criteria": true,
+  "late_information_share_of_added_distance_percent": 18.035096801117767,
+  "equity_maximum_total_distance_increase_m": 187.06261145435838,
+  "priority_general_path_checks": [
+    {
+      "origin": "N3390512293",
+      "label": "서울역 1번출구 (GTX-A)",
+      "coverage_E_m": 39.32829171880621,
+      "recommended_E_m": 39.32829171880621,
+      "change_m": 0.0
+    },
+    {
+      "origin": "N3403067549",
+      "label": "회현역 4번출구",
+      "coverage_E_m": 1374.8995816154359,
+      "recommended_E_m": 1374.8995816154359,
+      "change_m": 0.0
+    },
+    {
+      "origin": "N3403067568",
+      "label": "서울역 2번출구 (공항철도역)",
+      "coverage_E_m": 39.32829171880621,
+      "recommended_E_m": 39.32829171880621,
+      "change_m": 0.0
+    },
+    {
+      "origin": "N5348913429",
+      "label": "출입구 1",
+      "coverage_E_m": 635.6899053607881,
+      "recommended_E_m": 635.6899053607881,
+      "change_m": 0.0
+    }
+  ],
+  "step_free_paths_verified": false,
+  "carbon": {
+    "avoidance_fraction_assumption": 0.01,
+    "car_km_assumption": 5,
+    "occupancy_assumption": 1,
+    "fuel_economy_km_per_litre_assumption": 15,
+    "tailpipe_CO2_g_per_vehicle_km": 140.44799999999998,
+    "gross_avoided_CO2_g_per_target_journey": 7.022399999999999,
+    "actual_net_reduction": false
+  }
+}

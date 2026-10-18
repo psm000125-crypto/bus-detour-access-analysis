@@ -1,0 +1,19 @@
+{
+  "rule": "TOPIS main 10 notices in returned order; first 5 titles containing both 버스 and 우회. No outcome-based exclusions.",
+  "ids": [
+    "6237",
+    "6236",
+    "6228",
+    "6225",
+    "6223"
+  ],
+  "fields": [
+    "date",
+    "start_time",
+    "end_time",
+    "explicit_route_numbers",
+    "route_count"
+  ],
+  "input": "raw/notice_list.json",
+  "scope": "HTML notice body only, attachments excluded; current small convenience sample, not historical route model inputs"
+}

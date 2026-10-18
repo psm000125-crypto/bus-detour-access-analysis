@@ -1,0 +1,445 @@
+{
+  "scope": "22 equally weighted modeled origin routes; equity comparison with separate baselines, not measured passenger or group equity effects",
+  "equity_vs_baseline": {
+    "efficiency": {
+      "max_E_m": {
+        "baseline": 1374.8995816154359,
+        "equity": 1007.1569064858686,
+        "equity_minus_baseline": -367.74267512956726,
+        "change_percent": -26.746875193422394
+      },
+      "sum_E_m": {
+        "baseline": 7280.417147843372,
+        "equity": 7327.355508369223,
+        "equity_minus_baseline": 46.93836052585084,
+        "change_percent": 0.6447207566911887
+      },
+      "max_D_m": {
+        "baseline": 3384.1820223229042,
+        "equity": 3588.5986946995945,
+        "equity_minus_baseline": 204.41667237669026,
+        "change_percent": 6.040356902445175
+      },
+      "mean_E_m": {
+        "baseline": 330.92805217469873,
+        "equity": 333.06161401678287,
+        "equity_minus_baseline": 2.1335618420841342,
+        "change_percent": 0.6447207566911901
+      },
+      "mean_D_m": {
+        "baseline": 2353.412039005187,
+        "equity": 2355.54560084727,
+        "equity_minus_baseline": 2.133561842083054,
+        "change_percent": 0.09065823607263154
+      }
+    },
+    "coverage_strong": {
+      "max_E_m": {
+        "baseline": 1392.7934194570423,
+        "equity": 1007.1569064858686,
+        "equity_minus_baseline": -385.6365129711737,
+        "change_percent": -27.6879907374568
+      },
+      "sum_E_m": {
+        "baseline": 10282.95130595388,
+        "equity": 7327.355508369223,
+        "equity_minus_baseline": -2955.5957975846577,
+        "change_percent": -28.742680089065022
+      },
+      "max_D_m": {
+        "baseline": 3401.536083245236,
+        "equity": 3588.5986946995945,
+        "equity_minus_baseline": 187.06261145435838,
+        "change_percent": 5.49935696333673
+      },
+      "mean_E_m": {
+        "baseline": 467.4068775433582,
+        "equity": 333.06161401678287,
+        "equity_minus_baseline": -134.3452635265753,
+        "change_percent": -28.742680089065015
+      },
+      "mean_D_m": {
+        "baseline": 2489.890864373846,
+        "equity": 2355.54560084727,
+        "equity_minus_baseline": -134.34526352657576,
+        "change_percent": -5.395628597575529
+      }
+    }
+  },
+  "per_origin_equity_vs_baseline": {
+    "efficiency": {
+      "counts": {
+        "better": 4,
+        "worse": 10,
+        "same": 8
+      },
+      "rows": [
+        {
+          "origin": "N3390512293",
+          "label": "서울역 1번출구 (GTX-A)",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3390524793",
+          "label": "서울역 9-1출구",
+          "baseline_E_m": 95.51986365832818,
+          "equity_E_m": 95.51986365832818,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067548",
+          "label": "회현역 5번출구",
+          "baseline_E_m": 950.214273490066,
+          "equity_E_m": 950.214273490066,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067549",
+          "label": "회현역 4번출구",
+          "baseline_E_m": 1374.8995816154359,
+          "equity_E_m": 875.5924908051727,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067552",
+          "label": "서울역 3번출구",
+          "baseline_E_m": 195.52451552741172,
+          "equity_E_m": 195.52451552741172,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067553",
+          "label": "서울역 4번출구",
+          "baseline_E_m": 206.60295814610458,
+          "equity_E_m": 206.60295814610458,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067554",
+          "label": "서울역 5번출구",
+          "baseline_E_m": 134.33551558877457,
+          "equity_E_m": 134.33551558877457,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067555",
+          "label": "서울역 7번출구",
+          "baseline_E_m": 216.93626098220057,
+          "equity_E_m": 216.93626098220057,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067556",
+          "label": "서울역 6번출구",
+          "baseline_E_m": 143.72453845127438,
+          "equity_E_m": 143.72453845127438,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067557",
+          "label": "서울역 8번출구",
+          "baseline_E_m": 568.8866488646092,
+          "equity_E_m": 69.57955805434608,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067558",
+          "label": "서울역 9번출구",
+          "baseline_E_m": 499.30709081026316,
+          "equity_E_m": 0.0,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067559",
+          "label": "서울역 2번출구 (1호선)",
+          "baseline_E_m": 312.7937763950915,
+          "equity_E_m": 517.2104487717822,
+          "equity_minus_baseline_distance_m": 204.4166723766907,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067560",
+          "label": "서울역 10번출구",
+          "baseline_E_m": 154.37806088663774,
+          "equity_E_m": 358.794733263328,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067562",
+          "label": "서울역 11번출구",
+          "baseline_E_m": 174.05755959580847,
+          "equity_E_m": 378.4742319724987,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067563",
+          "label": "서울역 14번출구",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067564",
+          "label": "출입구 12",
+          "baseline_E_m": 174.05755959580802,
+          "equity_E_m": 378.4742319724983,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067565",
+          "label": "출입구 13",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067566",
+          "label": "서울역 15번출구",
+          "baseline_E_m": 802.7402341091783,
+          "equity_E_m": 1007.1569064858686,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067567",
+          "label": "서울역 3번출구",
+          "baseline_E_m": 444.1073461715605,
+          "equity_E_m": 444.1073461715605,
+          "equity_minus_baseline_distance_m": 0.0,
+          "status": "same"
+        },
+        {
+          "origin": "N3403067568",
+          "label": "서울역 2번출구 (공항철도역)",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067569",
+          "label": "서울역 1번출구 (공항철도역)",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N5348913429",
+          "label": "출입구 1",
+          "baseline_E_m": 635.6899053607881,
+          "equity_E_m": 136.38281455052493,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        }
+      ]
+    },
+    "coverage_strong": {
+      "counts": {
+        "better": 11,
+        "worse": 11,
+        "same": 0
+      },
+      "rows": [
+        {
+          "origin": "N3390512293",
+          "label": "서울역 1번출구 (GTX-A)",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3390524793",
+          "label": "서울역 9-1출구",
+          "baseline_E_m": 0.0,
+          "equity_E_m": 95.51986365832818,
+          "equity_minus_baseline_distance_m": 95.51986365832818,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067548",
+          "label": "회현역 5번출구",
+          "baseline_E_m": 1392.7934194570423,
+          "equity_E_m": 950.214273490066,
+          "equity_minus_baseline_distance_m": -442.5791459669763,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067549",
+          "label": "회현역 4번출구",
+          "baseline_E_m": 1374.8995816154359,
+          "equity_E_m": 875.5924908051727,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067552",
+          "label": "서울역 3번출구",
+          "baseline_E_m": 638.103661494388,
+          "equity_E_m": 195.52451552741172,
+          "equity_minus_baseline_distance_m": -442.5791459669763,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067553",
+          "label": "서울역 4번출구",
+          "baseline_E_m": 649.1821041130813,
+          "equity_E_m": 206.60295814610458,
+          "equity_minus_baseline_distance_m": -442.57914596697674,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067554",
+          "label": "서울역 5번출구",
+          "baseline_E_m": 576.9146615557513,
+          "equity_E_m": 134.33551558877457,
+          "equity_minus_baseline_distance_m": -442.57914596697674,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067555",
+          "label": "서울역 7번출구",
+          "baseline_E_m": 659.5154069491771,
+          "equity_E_m": 216.93626098220057,
+          "equity_minus_baseline_distance_m": -442.5791459669765,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067556",
+          "label": "서울역 6번출구",
+          "baseline_E_m": 586.3036844182511,
+          "equity_E_m": 143.72453845127438,
+          "equity_minus_baseline_distance_m": -442.57914596697674,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067557",
+          "label": "서울역 8번출구",
+          "baseline_E_m": 568.8866488646092,
+          "equity_E_m": 69.57955805434608,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067558",
+          "label": "서울역 9번출구",
+          "baseline_E_m": 499.30709081026316,
+          "equity_E_m": 0.0,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067559",
+          "label": "서울역 2번출구 (1호선)",
+          "baseline_E_m": 312.7937763950915,
+          "equity_E_m": 517.2104487717822,
+          "equity_minus_baseline_distance_m": 204.4166723766907,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067560",
+          "label": "서울역 10번출구",
+          "baseline_E_m": 154.37806088663774,
+          "equity_E_m": 358.794733263328,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067562",
+          "label": "서울역 11번출구",
+          "baseline_E_m": 174.05755959580847,
+          "equity_E_m": 378.4742319724987,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067563",
+          "label": "서울역 14번출구",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067564",
+          "label": "출입구 12",
+          "baseline_E_m": 174.05755959580802,
+          "equity_E_m": 378.4742319724983,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067565",
+          "label": "출입구 13",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067566",
+          "label": "서울역 15번출구",
+          "baseline_E_m": 802.7402341091783,
+          "equity_E_m": 1007.1569064858686,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067567",
+          "label": "서울역 3번출구",
+          "baseline_E_m": 886.6864921385368,
+          "equity_E_m": 444.1073461715605,
+          "equity_minus_baseline_distance_m": -442.5791459669763,
+          "status": "better"
+        },
+        {
+          "origin": "N3403067568",
+          "label": "서울역 2번출구 (공항철도역)",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N3403067569",
+          "label": "서울역 1번출구 (공항철도역)",
+          "baseline_E_m": 39.32829171880621,
+          "equity_E_m": 243.74496409549647,
+          "equity_minus_baseline_distance_m": 204.41667237669026,
+          "status": "worse"
+        },
+        {
+          "origin": "N5348913429",
+          "label": "출입구 1",
+          "baseline_E_m": 635.6899053607881,
+          "equity_E_m": 136.38281455052493,
+          "equity_minus_baseline_distance_m": -499.30709081026316,
+          "status": "better"
+        }
+      ]
+    }
+  },
+  "input_sha256": {
+    "data_29\\policy_summary.csv": "ac3df71de20bad661e7250556c4511b2359767959ddcf8d26216c6e857c27b30",
+    "data_29\\journeys.csv": "405949b82e2c55791c60bd3aa50262fccbb61cb14e3452981d44d9d82208f5a3"
+  }
+}

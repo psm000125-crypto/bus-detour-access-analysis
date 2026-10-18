@@ -1,0 +1,55 @@
+{
+  "resolved": 22,
+  "candidate_count": 50,
+  "pairs_enumerated": 1225,
+  "all_4_optima_match": true,
+  "selected": {
+    "coverage_strong": {
+      "candidates": [
+        3390512493,
+        3390512593
+      ],
+      "covered": 22,
+      "max_E_m": 1392.7934194570423,
+      "sum_E_m": 10282.95130595388,
+      "max_D_m": 3401.536083245236
+    },
+    "efficiency": {
+      "candidates": [
+        3390512493,
+        5593950674
+      ],
+      "covered": 21,
+      "max_E_m": 1374.8995816154359,
+      "sum_E_m": 7280.417147843372,
+      "max_D_m": 3384.1820223229042
+    },
+    "equity": {
+      "candidates": [
+        5593950674,
+        "anchor_N3403067558"
+      ],
+      "covered": 11,
+      "max_E_m": 1007.1569064858686,
+      "sum_E_m": 7327.355508369223,
+      "max_D_m": 3588.5986946995945
+    },
+    "total_distance_equity": {
+      "candidates": [
+        3390512493,
+        5593950674
+      ],
+      "covered": 21,
+      "max_E_m": 1374.8995816154359,
+      "sum_E_m": 7280.417147843372,
+      "max_D_m": 3384.1820223229042
+    }
+  },
+  "explicit_evaluator_rows_checked": 88,
+  "max_absolute_error_m": 1.8189894035458565e-12,
+  "stairs_only_disconnected_origins": [
+    "N3390512293",
+    "N3403067568",
+    "N5348913429"
+  ]
+}

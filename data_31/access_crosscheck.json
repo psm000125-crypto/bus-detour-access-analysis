@@ -1,0 +1,92 @@
+{
+  "checked_on": "2026-10-18",
+  "reviewer": "separate AI agent; not an independent human or field inspection",
+  "historical_event_datetime": "2026-04-05T07:00:00+09:00",
+  "entrances": [
+    {
+      "osm_node_id": 3390512293,
+      "osm_label": "서울역 1번출구 (GTX-A)",
+      "official_named_facility": "서울역 지상광장의 GTX-A 1번 출구 엘리베이터",
+      "matching_level": "same station/operator/exit label; coordinate identity not independently verified",
+      "source_url": "https://www.gtx-a.com/noticeDetail.do?boardId=177",
+      "source_title": "GTX-A 서울역 토/일/공휴일 24:10 이후 탑승 안내",
+      "source_publication_date": "2025-11-27",
+      "verified_claim": "The operator explicitly directs late-night weekend/holiday users to the named Exit 1 elevator in the station ground plaza.",
+      "local_raw": "raw/gtx_notice177_current.html",
+      "event_day_operation_verified": false,
+      "continuous_step_free_route_to_cpbc_verified": false,
+      "conclusion": "Do not infer absence of an elevator or actual inaccessibility from the OSM stair-filter disconnection. Officially named elevator exists, but event-day and continuous outdoor connection need verification."
+    },
+    {
+      "osm_node_id": 3403067568,
+      "osm_label": "서울역 2번출구 (공항철도역)",
+      "official_named_facility": "공항철도 서울역의 엘리베이터와 장애인 편의시설; official station guide mentions Exit 15",
+      "matching_level": "station/operator-level match only; exact Exit 2 not independently matched",
+      "source_url": "https://www.airportrailroad.com/train/normal/info/010/0",
+      "source_title": "공항철도 서울역 기본정보·주요시설·장애인 편의시설·비상대피로",
+      "source_publication_date": null,
+      "verified_claim": "The official page lists 10 elevators and wheelchair gates, handrails and an accessible elevator. Its evacuation guide includes Exit 15 and elevator connections.",
+      "local_raw": "raw/arex_seoul_current.html",
+      "official_diagram": "raw/arex_emergency_seoul.pdf",
+      "event_day_operation_verified": false,
+      "continuous_step_free_route_to_cpbc_verified": false,
+      "conclusion": "Use as evidence that relevant station facilities exist. Do not assign any listed elevator to OSM Exit 2 or certify an alternative route."
+    },
+    {
+      "osm_node_id": 5348913429,
+      "osm_label": "출입구 1",
+      "official_named_facility": null,
+      "matching_level": "station and exit identity unresolved in historical source",
+      "source_url": null,
+      "verified_claim": "Historical OSM node has railway=subway_entrance and ref=1 but no station/operator name.",
+      "local_raw": "../data_13/raw/osm_medium_windows_response.txt",
+      "event_day_operation_verified": false,
+      "continuous_step_free_route_to_cpbc_verified": false,
+      "conclusion": "Do not attach Seoul Metro/Korail facility data based only on a shared exit number. Keep the OSM ID and original label until exact identity is verified."
+    }
+  ],
+  "additional_operator_sources": [
+    {
+      "url": "https://www.gtx-a.com/mobilhandiFC.do",
+      "verified_claim": "GTX-A Seoul station row lists 5 elevators. This operator scope differs from AREX and must not be added or substituted.",
+      "local_raw": "raw/gtx_mobility_current.html"
+    },
+    {
+      "url": "https://www.gtx-a.com/stationIF.do",
+      "verified_claim": "Official Seoul station description and diagram show internal elevators; these do not certify an outdoor route to the temporary bus boarding point.",
+      "local_raw": "raw/gtx_station_current.html",
+      "official_diagram": "raw/gtx_seoul_escape.png"
+    }
+  ],
+  "submission_requirements": {
+    "official_notice_url": "https://koreashe.org/notice/?mod=document&uid=95427",
+    "report_form_url": "https://koreashe.org/wp-content/uploads/2026/08/%EB%B6%99%EC%9E%842-%EB%B6%84%EC%84%9D%EB%B3%B4%EA%B3%A0%EC%84%9C%EC%B5%9C%EC%A2%85.hwp",
+    "new_download_matches_preserved_form": true,
+    "sha256": "0A34E8EE013EC6DE0706D090542B0CC269790BD4D5BF7181105520B7B9AA1C15",
+    "body_pages": "5장 내외; 표지·참고문헌 제외",
+    "report_format": "PDF",
+    "code_requirement": "Programming analyses must put a Github/cloud code link in the report. Finalists submit complete executable code under separate instructions; code execution checked at final presentation.",
+    "zip_required_or_explicitly_allowed_found": false,
+    "zip_scope": "Personal reproducibility package only. Do not describe it as an officially required or officially accepted preliminary submission attachment.",
+    "reviewed_documents": [
+      "raw/official_notice_current.html",
+      "raw/official_report_current.hwp",
+      "raw/official_report_current.txt",
+      "raw/official_application_current.hwp",
+      "raw/official_application_current.txt"
+    ],
+    "ai_disclosure_requirement": "Both application and report form require service, scope and main prompts. The user's decision to keep prompts out of the report remains a separate submission-check issue."
+  },
+  "source_files_sha256": {
+    "official_notice_current.html": "b3126eb049c508d007b336c1120b9e67de7a803ca5a6bc27d111fda64501cb14",
+    "official_report_current.hwp": "0a34e8ee013ec6de0706d090542b0cc269790bd4d5bf7181105520b7b9aa1c15",
+    "official_application_current.hwp": "46e683923160beb772ad4eb4dd6e01961de284b4303c6e7ea63f6f0ddf18e8de",
+    "gtx_notice177_current.html": "a4964184b1466120232e65a9aea899276e74bd001666de185c5a6d03e5410d74",
+    "gtx_station_current.html": "337336bb045d3d6531ce39fe29e296dce548427e58eec44cbcf1990e56a26d87",
+    "gtx_mobility_current.html": "e0e6ca827ee65bf9fbb5739375edf538d26e6622130367904b778a72a77969c4",
+    "gtx_seoul_escape.png": "e0440a12b3c709d0e05acb847552936b50b188b057a7d21fc6182ff8db00cde9",
+    "arex_seoul_current.html": "3870fc12ecdf415b2112e00373c5d0424bbed91e551578cc52cab703f48229ce",
+    "arex_facilities_current.html": "d04fbb0c2319e0e54034193ff9d9885e4bfeddc62796adac62d9812f5b1e5713",
+    "arex_emergency_seoul.pdf": "71ea8cc66587e8aee3f619791c209770db764f3595749a1b38f22f78c5a353e8"
+  }
+}

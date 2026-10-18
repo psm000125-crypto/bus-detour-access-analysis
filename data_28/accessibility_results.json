@@ -1,0 +1,27 @@
+{
+  "selected_entrances": 22,
+  "baseline_connected": 21,
+  "status_counts": {
+    "no_path_after_mapped_restrictions": 3,
+    "baseline_map_unresolved": 1,
+    "mapped_path_exists_accessibility_unverified": 17,
+    "entrance_explicit_wheelchair_no": 1
+  },
+  "entrance_wheelchair_tag_counts": {
+    "unknown": 20,
+    "no": 1,
+    "yes": 1
+  },
+  "removed_edges": 582,
+  "removed_nodes": 8,
+  "baseline_routes_with_steps": 3,
+  "new_disconnections_stairs_only": 3,
+  "restricted_connected_geometrically": 18,
+  "max_stair_exclusion_detour_m": 0.0,
+  "mapped_elevators_in_supplement": 0,
+  "supplement_acquired": false,
+  "scope": "22 mapped entrance records, not 22 passengers or stations. wheelchair=no is a historical OSM annotation, not a field audit. Existing anchors remain fixed. Road assumptions, kerbs, gradients, entrance interiors, elevator operation and vehicle boarding remain unverified. Missing tags are unknown, never accessible.",
+  "input_sha256": {
+    "data_13\\raw\\osm_medium_windows_response.txt": "6f7e2e9e4af739a4133b708f2c15a60984277aabbcf827c8e0ffe58a827d7444"
+  }
+}

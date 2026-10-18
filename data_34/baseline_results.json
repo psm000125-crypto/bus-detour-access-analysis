@@ -1,0 +1,36 @@
+{
+  "revision": 34,
+  "recommended_policy": "equity",
+  "origin_count": 22,
+  "baseline_definition": "stop_only is the comparison model retaining notice at the original stop, not observed current field outcomes",
+  "comparisons": {
+    "stop_only": {
+      "better": 11,
+      "same": 11,
+      "worse": 0
+    },
+    "coverage_strong": {
+      "better": 11,
+      "same": 0,
+      "worse": 11
+    },
+    "efficiency": {
+      "better": 4,
+      "same": 8,
+      "worse": 10
+    }
+  },
+  "additional_notice_encountered": 11,
+  "all_additionally_reached_improved": true,
+  "not_additionally_reached": 11,
+  "all_unreached_unchanged": true,
+  "original_stop_notice_retained": true,
+  "no_worse_than_stop_only": true,
+  "extra_walking_definition": "E = D_policy - D_known; boarding-location difference is a separate component",
+  "scope": "Conditional mapped walking under the first-encountered-notice assumption; not measured rider outcomes",
+  "input_sha256": {
+    "journeys.csv": "405949b82e2c55791c60bd3aa50262fccbb61cb14e3452981d44d9d82208f5a3",
+    "policy_summary.csv": "ac3df71de20bad661e7250556c4511b2359767959ddcf8d26216c6e857c27b30",
+    "results.json": "c13bcc35470a3e50d227e1c6dd8ea0cb72f0d34f714c919ce00a4a88892877b1"
+  }
+}

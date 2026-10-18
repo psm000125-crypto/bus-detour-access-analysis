@@ -1,0 +1,251 @@
+{
+  "notices": 5,
+  "fields_per_notice": 5,
+  "field_matches": 25,
+  "field_comparisons": 25,
+  "agreement_percent": 100.0,
+  "empty_route_lists": 1,
+  "per_field": {
+    "date": {
+      "matched": 5,
+      "n": 5
+    },
+    "start_time": {
+      "matched": 5,
+      "n": 5
+    },
+    "end_time": {
+      "matched": 5,
+      "n": 5
+    },
+    "explicit_route_numbers": {
+      "matched": 5,
+      "n": 5
+    },
+    "route_count": {
+      "matched": 5,
+      "n": 5
+    }
+  },
+  "source_publication_dates": {
+    "6237": "2026-10-16 11:31:09",
+    "6236": "2026-10-16 10:42:53",
+    "6228": "2026-10-14 09:00:04",
+    "6225": "2026-10-12 09:41:57",
+    "6223": "2026-10-12 09:29:08"
+  },
+  "comparisons": [
+    {
+      "id": "6237",
+      "field": "date",
+      "prediction": "2026-10-18",
+      "reference": "2026-10-18",
+      "match": true
+    },
+    {
+      "id": "6237",
+      "field": "start_time",
+      "prediction": "06:00",
+      "reference": "06:00",
+      "match": true
+    },
+    {
+      "id": "6237",
+      "field": "end_time",
+      "prediction": "11:30",
+      "reference": "11:30",
+      "match": true
+    },
+    {
+      "id": "6237",
+      "field": "explicit_route_numbers",
+      "prediction": [],
+      "reference": [],
+      "match": true
+    },
+    {
+      "id": "6237",
+      "field": "route_count",
+      "prediction": 96,
+      "reference": 96,
+      "match": true
+    },
+    {
+      "id": "6236",
+      "field": "date",
+      "prediction": "2026-10-17",
+      "reference": "2026-10-17",
+      "match": true
+    },
+    {
+      "id": "6236",
+      "field": "start_time",
+      "prediction": "07:30",
+      "reference": "07:30",
+      "match": true
+    },
+    {
+      "id": "6236",
+      "field": "end_time",
+      "prediction": "09:10",
+      "reference": "09:10",
+      "match": true
+    },
+    {
+      "id": "6236",
+      "field": "explicit_route_numbers",
+      "prediction": [
+        "162",
+        "6633"
+      ],
+      "reference": [
+        "162",
+        "6633"
+      ],
+      "match": true
+    },
+    {
+      "id": "6236",
+      "field": "route_count",
+      "prediction": 17,
+      "reference": 17,
+      "match": true
+    },
+    {
+      "id": "6228",
+      "field": "date",
+      "prediction": "2026-10-17",
+      "reference": "2026-10-17",
+      "match": true
+    },
+    {
+      "id": "6228",
+      "field": "start_time",
+      "prediction": "09:50",
+      "reference": "09:50",
+      "match": true
+    },
+    {
+      "id": "6228",
+      "field": "end_time",
+      "prediction": "11:00",
+      "reference": "11:00",
+      "match": true
+    },
+    {
+      "id": "6228",
+      "field": "explicit_route_numbers",
+      "prediction": [
+        "120",
+        "1222",
+        "147",
+        "261"
+      ],
+      "reference": [
+        "120",
+        "1222",
+        "147",
+        "261"
+      ],
+      "match": true
+    },
+    {
+      "id": "6228",
+      "field": "route_count",
+      "prediction": 4,
+      "reference": 4,
+      "match": true
+    },
+    {
+      "id": "6225",
+      "field": "date",
+      "prediction": "2026-10-18",
+      "reference": "2026-10-18",
+      "match": true
+    },
+    {
+      "id": "6225",
+      "field": "start_time",
+      "prediction": "07:30",
+      "reference": "07:30",
+      "match": true
+    },
+    {
+      "id": "6225",
+      "field": "end_time",
+      "prediction": "10:10",
+      "reference": "10:10",
+      "match": true
+    },
+    {
+      "id": "6225",
+      "field": "explicit_route_numbers",
+      "prediction": [
+        "320",
+        "송파01",
+        "송파03"
+      ],
+      "reference": [
+        "320",
+        "송파01",
+        "송파03"
+      ],
+      "match": true
+    },
+    {
+      "id": "6225",
+      "field": "route_count",
+      "prediction": 33,
+      "reference": 33,
+      "match": true
+    },
+    {
+      "id": "6223",
+      "field": "date",
+      "prediction": "2026-10-18",
+      "reference": "2026-10-18",
+      "match": true
+    },
+    {
+      "id": "6223",
+      "field": "start_time",
+      "prediction": "12:00",
+      "reference": "12:00",
+      "match": true
+    },
+    {
+      "id": "6223",
+      "field": "end_time",
+      "prediction": "24:00",
+      "reference": "24:00",
+      "match": true
+    },
+    {
+      "id": "6223",
+      "field": "explicit_route_numbers",
+      "prediction": [
+        "405",
+        "740"
+      ],
+      "reference": [
+        "405",
+        "740"
+      ],
+      "match": true
+    },
+    {
+      "id": "6223",
+      "field": "route_count",
+      "prediction": 2,
+      "reference": 2,
+      "match": true
+    }
+  ],
+  "time_conflicts_flagged": [
+    "6236: 07:30-09:10 is 100 minutes, but literal source also says 2 hours"
+  ],
+  "gold_standard": "Separate agent source reading, not independently labeled human ground truth",
+  "actual_independent_model_api_calls": 0,
+  "human_time_savings_measured": false,
+  "scope": "Agreement on archived text and title; no attachment, OCR, stop-coordinate, unseen-population or field-travel performance claim."
+}

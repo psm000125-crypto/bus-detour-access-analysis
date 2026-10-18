@@ -1,0 +1,23 @@
+﻿origin,label,wheelchair_tag,status,baseline_m,steps_m,restricted_m
+N3390512293,서울역 1번출구 (GTX-A),unknown,no_route_without_steps,2145.116280433262,25.27295392477848,
+N3390524793,서울역 9-1출구,unknown,mapped_route_needs_field_check,2139.7013997254116,0.0,2139.7013997254116
+N3403067548,회현역 5번출구,unknown,mapped_route_needs_field_check,1402.045603162104,0.0,1402.045603162104
+N3403067549,회현역 4번출구,no,entrance_restricted,1409.8794750713685,0.0,1409.8794750713685
+N3403067552,서울역 3번출구,unknown,mapped_route_needs_field_check,1757.2439464596994,0.0,1757.2439464596994
+N3403067553,서울역 4번출구,unknown,mapped_route_needs_field_check,1744.0576821158425,0.0,1744.0576821158425
+N3403067554,서울역 5번출구,unknown,mapped_route_needs_field_check,1789.0413433759834,0.0,1789.0413433759834
+N3403067555,서울역 7번출구,unknown,mapped_route_needs_field_check,1768.6846094160373,0.0,1768.6846094160373
+N3403067556,서울역 6번출구,unknown,mapped_route_needs_field_check,1805.2904706815004,0.0,1805.2904706815004
+N3403067557,서울역 8번출구,unknown,mapped_route_needs_field_check,1812.8859414467825,0.0,1812.8859414467825
+N3403067558,서울역 9번출구,unknown,mapped_route_needs_field_check,1847.6757204739558,0.0,1847.6757204739558
+N3403067559,서울역 2번출구 (1호선),yes,mapped_route_needs_field_check,1969.854464953772,0.0,1969.854464953772
+N3403067560,서울역 10번출구,unknown,mapped_route_needs_field_check,2093.50140703127,0.0,2093.50140703127
+N3403067562,서울역 11번출구,unknown,mapped_route_needs_field_check,2238.152194765622,0.0,2238.152194765622
+N3403067563,서울역 14번출구,unknown,mapped_route_needs_field_check,2226.521515493148,0.0,2226.521515493148
+N3403067564,출입구 12,unknown,mapped_route_needs_field_check,2348.178200223119,0.0,2348.178200223119
+N3403067565,출입구 13,unknown,mapped_route_needs_field_check,2331.753576995197,0.0,2331.753576995197
+N3403067566,서울역 15번출구,unknown,mapped_route_needs_field_check,2581.441788213725,0.0,2581.441788213725
+N3403067567,서울역 3번출구,unknown,mapped_route_needs_field_check,2514.8495911066993,0.0,2514.8495911066993
+N3403067568,서울역 2번출구 (공항철도역),unknown,no_route_without_steps,2130.238174397213,25.27295392477848,
+N3403067569,서울역 1번출구 (공항철도역),unknown,mapped_route_needs_field_check,2136.034736295882,0.0,2136.034736295882
+N5348913429,출입구 1,unknown,no_route_without_steps,2302.4995884331556,152.9382165162081,
