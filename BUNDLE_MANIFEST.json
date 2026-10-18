@@ -3,16 +3,28 @@
   "scope": "curated current-model reproduction including access audit and review drafts; no personal data or browser captures",
   "files": {
     "CODE_README.md": {
-      "bytes": 6609,
-      "sha256": "d22204bda98a769b8ff663566469bf51b46b5730d52892b78aef9d4b34cf7c65"
+      "bytes": 7083,
+      "sha256": "8e680f0d63f948b202cc6c60516c5c27fb365548da559bbf8558e40630e4ad0b"
     },
     "README.md": {
-      "bytes": 4489,
-      "sha256": "ac2f3687e8903ab1518a0e5feb0c46fec7fe9086d62366be05e34adf49f2ecc0"
+      "bytes": 5493,
+      "sha256": "a9143a1eb26d8163494b7702c10b7b15184dc1f7e1e9491114c53742952aae18"
+    },
+    "REPORT.md": {
+      "bytes": 17457,
+      "sha256": "f9f931a7eb372510576b7d8276a6c8d47818bfa31428e247f6deaf553a07f7ba"
     },
     "SOURCE_NOTICE.md": {
       "bytes": 3118,
       "sha256": "b697c299e1a124fe42a0419945e1eb627cc271ee4fc7123bfc5b73e6e1ab2dbf"
+    },
+    "assets/접근부담33.png": {
+      "bytes": 67113,
+      "sha256": "35070900562fbdb20893ffda73d97ab2f3ab555e99fdb89b8ec22c3e1d5d4e12"
+    },
+    "assets/정책비교34.png": {
+      "bytes": 27895,
+      "sha256": "5fbd42e2ba26b5b0ad507f709eccf721f3f25298c4afc103cebdd5ff5e75f664"
     },
     "data_09/AI_활용기록.md": {
       "bytes": 2834,
@@ -371,8 +383,8 @@
       "sha256": "cfd2b4dc1e640689f0006f8567b1e3099dda7a6ca2d8276e56f007a28946d626"
     },
     "data_29/README.md": {
-      "bytes": 5874,
-      "sha256": "f30fe98e2959be330c62d485849130c9a0337baf3082e891ed0329a51e9f67f9"
+      "bytes": 6360,
+      "sha256": "d3d1555edadd0934750523b276c3df49779a6e93ac9589ebb445760908d42a90"
     },
     "data_29/accessibility.csv": {
       "bytes": 2555,
@@ -543,8 +555,8 @@
       "sha256": "4f5c8878aff60089da069b962147944eff2d7369b09e35f3c2f4516702569235"
     },
     "data_33/README.md": {
-      "bytes": 3444,
-      "sha256": "03df64f392aef14f1061c7c94b9a1a40fbf349f074e096060b9d45f9d5cf5d93"
+      "bytes": 3909,
+      "sha256": "1f8f14ddb118b56d627e02a1583dbb2d1934eb1f8d868eab8aa952c2ba206653"
     },
     "data_33/peer_final_review.md": {
       "bytes": 4418,
@@ -571,8 +583,8 @@
       "sha256": "74e78762617aa4cd2e12169989a57e43935ae75008da8d34369561b9a6c63e4f"
     },
     "data_34/README.md": {
-      "bytes": 2710,
-      "sha256": "ae98ff092f4bb63cde0bb2455ef68503c562bfb4a217648f0ac244129bc52b47"
+      "bytes": 3174,
+      "sha256": "46023b9f941a55c236446ffe28042c620b735a3641ebb6dc7508f9f77bf37903"
     },
     "data_34/baseline_differences.csv": {
       "bytes": 7446,
